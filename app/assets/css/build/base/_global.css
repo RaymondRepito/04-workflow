@@ -5,3 +5,11 @@ body {
 	color: $mainBlue;
 	columns: 300px 2 ;
 }
+
+.box {
+
+	a {
+		display: block;
+		padding: 10px;
+	}
+}
