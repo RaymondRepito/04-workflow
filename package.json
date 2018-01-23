@@ -2,6 +2,7 @@
   "name": "dgties-2018",
   "version": "1.0.0",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-watch": "^5.0.0"
   }
 }
