@@ -8,8 +8,10 @@ gulp.task('watch', function() {
 		console.log("./app/index.html changed event. BrowserSync here.");
 	});
 
-	watch('./app/assets/css/**/*.css', function() {
-		console.log("./app/assets/styles/**/*.css changed event. PostCSS or SASS here.");
+	watch('./app/assets/css/build/**/*.css', function() {
+		//console.log("./app/assets/css/build/**/*.css changed event. PostCSS or SASS here.");
+
+		gulp.start('styles'); // Run styles task found in 'gulp/tasks/styles.js
 	});
 
 });
