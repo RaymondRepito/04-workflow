@@ -1,4 +1,7 @@
+$mainBlue: #2f5572;
+
 body {
 	font-family: 'Roboto', sans-serif;
-	color: #333;
+	color: $mainBlue;
+	columns: 300px 2 ;
 }
