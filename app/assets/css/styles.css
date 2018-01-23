@@ -1,10 +1,9 @@
+/*@import "normalize.css";*/
 body {
 	font-family: 'Roboto', sans-serif;
 	color: #2f5572;
-	-webkit-columns: 300px 2 ;
-	        columns: 300px 2 ;
+	/*columns: 300px 2 ;*/
 }
-
 .box a {
 		display: block;
 		padding: 10px;

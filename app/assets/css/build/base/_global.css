@@ -3,7 +3,7 @@ $mainBlue: #2f5572;
 body {
 	font-family: 'Roboto', sans-serif;
 	color: $mainBlue;
-	columns: 300px 2 ;
+	/*columns: 300px 2 ;*/
 }
 
 .box {
