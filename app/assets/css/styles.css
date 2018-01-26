@@ -469,7 +469,7 @@ img {
 	}
 
 a {
-	/*text-decoration: none;*/
+	text-decoration: none;
 	color: #d59541;
 }
 
@@ -1577,4 +1577,28 @@ a {
 		height: 42px;
 		/*background-image: url('../../assets/img/sprite/css/svg/sprite-d40125ee.svg');*/
 		background-position: 45.61862358478565% 57.22460658082976%;
+	}
+
+.site-footer {
+	background-color: #292f6f;
+	color: #FFF;
+	padding: .5rem 0;
+	text-align: center;
+}
+
+.site-footer__text {
+		display: block;
+		margin-bottom: 1rem;
+		font-weight: 200;
+	}
+
+@media (min-width: 900px) {
+
+.site-footer__text {
+			display: inline;
+			margin-bottom: 0;
+
+			/* horizontal spacing between copyright and get in touch for medium */
+			margin-right: 1.4rem
+	}
 	}
