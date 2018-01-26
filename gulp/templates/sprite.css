@@ -1,0 +1,15 @@
+/* Source: https://github.com/jkphl/svg-sprite */
+{{#shapes}}
+	.icon--{{base}} {
+			
+
+		/* background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit; */
+		background: url('../../app/assets/img/sprite/css/{{{sprite}}}') {{position.relative.xy}}/{{width.outer}}px {{height.outer}}px;
+
+		/*
+		width: {{width.outer}}px;
+		height: {{height.outer}}px;
+		background-image: url('/app/assets/img/sprite/css/{{{sprite}}}');
+		background-position: {{position.relative.xy}};*/
+	}
+{{/shapes}}

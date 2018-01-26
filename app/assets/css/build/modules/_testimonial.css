@@ -1,0 +1,54 @@
+.testimonial {
+
+	background-color: rgba(255, 255, 255, .8);
+
+	/* 1px bottom so the bottom margin of paragraph has something to push */
+	/* try zero (0) bottom marhin */
+	padding: 0 18px 1px 18px;
+	margin-bottom: 98px; /* 80px + 18px */
+
+	&--last {
+		margin-bottom: 0;
+	}
+
+	@mixin atLarge {
+		padding: 0 1.8125rem 1px 1.18125rem;
+		margin-bottom: 0; /* Reset */
+	}
+
+	&__photo {
+		/* To effect cropping of picture that goes beyond (overflows) the border */
+		/* To make a circle: height = width; border-radius = 5-% */
+		border-radius: 50%;
+		overflow: hidden;
+		height: 160px;
+		width: 160px;
+
+		/* Center Horizontally */
+		/* Counter relative -80px top with negative bottom margin */
+		margin: 0 auto -80px auto;
+
+		/* Position Offset upwards Half of Height */
+		position: relative;
+		top: -80px;
+
+		border: 6px solid rgba(255, 255, 255, .8);
+	}
+
+	&__title {
+		color: $mainBlue;
+		text-align: center;
+		font-size: 1.5rem;
+		font-weight: 500;
+		margin: 0;
+	}
+
+	&__subtitle {
+		color: $mainOrange;
+		text-align: center;
+		font-size: .9375rem;
+		font-weight: 400;
+
+		margin: .25rem 0 1rem 0;
+	}
+}

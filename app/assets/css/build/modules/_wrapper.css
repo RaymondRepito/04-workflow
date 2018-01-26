@@ -7,7 +7,7 @@
 
 	/* Limit Content to !!!1200px!!! and center wrapper box in screen horizontally */
 	/*background-color: yellow;*/
-	max-width: 1200px + 36px;	/* Add 36px = 18px * 2 from Padding to account for box-sizing */
+	max-width: 1236px;	/* Add 36px = 18px * 2 from Padding to account for box-sizing */
 	margin-left: auto;
 	margin-right: auto;
 	

@@ -1,0 +1,13 @@
+
+	.icon--star {
+			
+
+		/* background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit; */
+		background: url('../../app/assets/img/sprite/css/svg/sprite.svg') 42.51549586776859% 62.465843023255815%/64px 64px;
+
+		/*
+		width: 64px;
+		height: 64px;
+		background-image: url('/app/assets/img/sprite/css/svg/sprite.css-d40125ee.svg');
+		background-position: 42.51549586776859% 62.465843023255815%;*/
+	}
