@@ -40,7 +40,7 @@
 			/* vertically align top */
 			/* horizontally align center */
 			/* no-repeat = no tiling */
-			background: url('../../assets/img/testimonials-bg.jpg') top center no-repeat;
+			background: url('/assets/img/testimonials-bg.jpg') top center no-repeat;
 		}
 	}
 }
