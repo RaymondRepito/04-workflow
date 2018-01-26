@@ -11,7 +11,13 @@
 }
 
 @define-mixin atLarge {
+	/* 1200 could  be overkill - subjective
 	@media (min-width: 1200px) {
+		@mixin-content;
+	}
+	*/
+
+	@media (min-width: 1010px) {
 		@mixin-content;
 	}
 }

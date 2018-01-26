@@ -916,6 +916,38 @@ a {
 		margin-left: auto;
 	}
 
+.wrapper--no-padding-until-medium {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+@media (min-width: 900px) {
+
+.wrapper--no-padding-until-medium {
+			padding-left: 18px;
+			padding-right: 18px
+	}
+	}
+
+.wrapper--no-padding-until-large {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+/* 1200 could  be overkill - subjective
+	@media (min-width: 1200px) {
+		@mixin-content;
+	}
+	*/
+
+@media (min-width: 1010px) {
+
+.wrapper--no-padding-until-large {
+			padding-left: 18px;
+			padding-right: 18px
+	}
+	}
+
 /* Remove Padding for all .wrappers's within a .wrapper */
 
 .wrapper .wrapper {
@@ -938,11 +970,6 @@ a {
 	padding: 1.2rem 0;
 }
 
-.page-section--blue {
-		background-color: #292f6f;
-		color: #FFF;
-	}
-
 @media (min-width: 600px) {
 
 .page-section {
@@ -955,6 +982,61 @@ a {
 .page-section {
 		padding: 4.5rem 0
 }
+	}
+
+.page-section--no-b-padding-until-medium {
+		padding-bottom: 0;
+	}
+
+@media (min-width: 900px) {
+
+.page-section--no-b-padding-until-medium {
+			padding: 4.5rem 0
+	}
+	}
+
+.page-section--no-b-padding-until-large {
+		padding-bottom: 0;
+	}
+
+/* 1200 could  be overkill - subjective
+	@media (min-width: 1200px) {
+		@mixin-content;
+	}
+	*/
+
+@media (min-width: 1010px) {
+
+.page-section--no-b-padding-until-large {
+			padding: 4.5rem 0
+	}
+	}
+
+.page-section--blue {
+		background-color: #292f6f;
+		color: #FFF;
+	}
+
+.page-section--testimonials {
+
+		/* background image does not make sense for smaller screens */
+		background-color: #e0e6ef;
+	}
+
+/* 1200 could  be overkill - subjective
+	@media (min-width: 1200px) {
+		@mixin-content;
+	}
+	*/
+
+@media (min-width: 1010px) {
+
+.page-section--testimonials {
+			/* vertically align top */
+			/* horizontally align center */
+			/* no-repeat = no tiling */
+			background: url('../../assets/img/testimonials-bg.jpg') top center no-repeat
+	}
 	}
 
 /* h2 */
@@ -1027,12 +1109,20 @@ a {
 		display: table;
 	}
 
+.row--t-padding {
+		padding-top: 80px;
+	}
+
 .row--gutters {
 		margin-right: -65px;
 	}
 
 .row--gutters-large {
 		margin-right: -100px;
+	}
+
+.row--gutters-small {
+		margin-right: -45px;
 	}
 
 /* '>', means all direct children that use the tag 'div' */
@@ -1049,6 +1139,10 @@ a {
 	
 		}
 	*/
+
+.row--gutters-small> div {
+		padding-right: 45px;
+	}
 
 .row--gutters > div {
 		padding-right: 65px;
@@ -1069,10 +1163,10 @@ a {
 			width: 33.33%;
 		}
 
-			.row__medium-4--larger {
-				float: left;
-				width: 37%;
-			}
+		.row--medium-4-larger {
+			float: left;
+			width: 37%;
+		}
 
 		.row__medium-6 {
 			float: left;
@@ -1084,11 +1178,89 @@ a {
 			width: 66.66%;
 		}
 
-			.row__medium-8--smaller {
-				float: left;
-				width: 63%;
-			}
+		.row--medium-8-smaller {
+			float: left;
+			width: 63%;
+		}
 	}
+
+/* 1200 could  be overkill - subjective
+	@media (min-width: 1200px) {
+		@mixin-content;
+	}
+	*/
+
+@media (min-width: 1010px) {
+
+		.row--b-margin-until-large {
+			margin-bottom: 0;
+		}
+
+		.row__large-4 {
+			float: left;
+			width: 33.33%;
+		}
+
+		.row--large-4-larger {
+			float: left;
+			width: 37%;
+		}
+
+		.row__large-6 {
+			float: left;
+			width: 50%;
+		}
+
+		.row__large-8 {
+			float: left;
+			width: 66.66%;
+		}
+
+		.row--large-8-smaller {
+			float: left;
+			width: 63%;
+		}
+	}
+
+/* Begin Equal Height Rules */
+
+@media (min-width: 900px) {
+
+.row--equal-height-at-medium {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex
+	}
+	}
+
+.row--equal-height-at-medium > div {
+			float: none;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+		}
+
+/* 1200 could  be overkill - subjective
+	@media (min-width: 1200px) {
+		@mixin-content;
+	}
+	*/
+
+@media (min-width: 1010px) {
+
+.row--equal-height-at-large {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex
+	}
+	}
+
+.row--equal-height-at-large > div {
+			float: none;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+		}
 
 .generic-content-container p {
 		line-height: 1.65;
@@ -1119,6 +1291,10 @@ a {
 		font-weight: 500;
 	}
 
+.section-title--blue {
+		color: #292f6f;
+	}
+
 @media (min-width: 600px) {
 
 .section-title {
@@ -1138,6 +1314,8 @@ a {
 @media (min-width: 600px) {
 
 .section-title__icon {
+			position: relative;
+			top: 8px;
 			display: inline;		/* Reset */
 			margin-left: 0;			/* Reset */
 			margin-right: .5rem;	
@@ -1185,4 +1363,70 @@ a {
 			font-size: 1.875rem;
 			text-align: left
 	}
+	}
+
+.testimonial {
+
+	background-color: rgba(255, 255, 255, .8);
+
+	/* 1px bottom so the bottom margin of paragraph has something to push */
+	/* try zero (0) bottom marhin */
+	padding: 0 18px 1px 18px;
+	margin-bottom: 98px;
+}
+
+/* 80px + 18px */
+
+.testimonial--last {
+		margin-bottom: 0;
+	}
+
+/* 1200 could  be overkill - subjective
+	@media (min-width: 1200px) {
+		@mixin-content;
+	}
+	*/
+
+@media (min-width: 1010px) {
+
+.testimonial {
+		padding: 0 1.8125rem 1px 1.18125rem;
+		margin-bottom: 0 /* Reset */
+}
+	}
+
+.testimonial__photo {
+		/* To effect cropping of picture that goes beyond (overflows) the border */
+		/* To make a circle: height = width; border-radius = 5-% */
+		border-radius: 50%;
+		overflow: hidden;
+		height: 160px;
+		width: 160px;
+
+		/* Center Horizontally */
+		/* Counter relative -80px top with negative bottom margin */
+		margin: 0 auto -80px auto;
+
+		/* Position Offset upwards Half of Height */
+		position: relative;
+		top: -80px;
+
+		border: 6px solid rgba(255, 255, 255, .8);
+	}
+
+.testimonial__title {
+		color: #292f6f;
+		text-align: center;
+		font-size: 1.5rem;
+		font-weight: 500;
+		margin: 0;
+	}
+
+.testimonial__subtitle {
+		color: #d59541;
+		text-align: center;
+		font-size: .9375rem;
+		font-weight: 400;
+
+		margin: .25rem 0 1rem 0;
 	}
