@@ -1,5 +1,5 @@
 .wrapper {
-	background-color: green;
+	/*background-color: green;*/
 	padding-left: 18px;
 	padding-right: 18px;
 
@@ -13,7 +13,7 @@
 	
 
 	&--medium {
-		max-width: 200px;
+		max-width: 976px;
 		margin-right: auto;
 		margin-left: auto;
 	}
