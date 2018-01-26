@@ -1,0 +1,54 @@
+.row {
+
+	/*background-color: yellow;*/
+
+	@mixin clearfix;
+
+	&--gutters {
+		margin-right: -65px;
+	}
+
+	/* 
+		parent > children {
+	
+		}
+		.row--gutters > div {
+	
+		}
+	*/
+	/* '>', means all direct children that use the tag 'div' */
+	&--gutters > div {
+		padding-right: 65px;
+	}
+
+	&--b-margin-until-medium {
+		margin-bottom: 1rem;
+	}
+
+	@mixin atMedium {
+
+		&--b-margin-until-medium {
+			margin-bottom: 0;
+		}
+
+		&--medium-4 {
+			float: left;
+			width: 33.33%;
+
+			&--larger {
+				float: left;
+				width: 37%;
+			}
+		}
+
+		&--medium-8 {
+			float: left;
+			width: 66.66%;
+
+			&--smaller {
+				float: left;
+				width: 63%;
+			}
+		}
+	}
+}

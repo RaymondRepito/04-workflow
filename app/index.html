@@ -89,14 +89,47 @@
 
     <body>
 
+        <!--
+        <section class="hero">
+                <div class="hero-inner">
+                    <div class="hero-content">
+                        <h1>Breath Easy</h1>
+                        <a class="hero-CTA" href="">Get Started</a>
+                        <p class="hero-descritpion">
+                            "Lorem ipsum dolor sit amet consectetur adipiscing elit vitae, vivamus torquent nibh sociosqu diam volutpat malesuada ad, rutrum felis massa tincidunt tellus nunc accumsan. Cubilia orci turpis varius facilisis sagittis quam quis, cursus himenaeos nisi pretium ut nibh nullam semper, auctor vivamus posuere sem tincidunt penatibus. Cum ultricies neque penatibus nostra est molestie habitasse lobortis, enim parturient tellus rutrum sem senectus integer fames, porta ullamcorper leo porttitor lacus proin magnis.""
+                        </p>
+                    </div>
+                </div>
+            </section>
+        -->
+        <!--
+        <div id="wrapper">
+            <div class="hero">
+
+            </div>
+        </div>
+    -->
+
+
         <!-- The page header typically contains items such as your site heading, logo and possibly the main site navigation -->
         <!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
+        
         <header role="banner">
-    
-            <!--<img src="assets/images/icons/clear-view-escapes.svg">-->
-            <img class="header-logo" src="assets/img/icons/DGTIES_FA_HORIZONTAL_FLAT_colored_2018_01_22.svg" width="300rem"/>
-    
-            <a href="#">Get in Touch</a>
+                
+            
+            
+            <!--
+            <img class="header-logo" src="assets/img/icons/DGTIES_FA_HORIZONTAL_FLAT_colored_2018_01_22.svg" width="230rem"/>
+            -->
+
+            <!--
+            <a href="#" class="button btn--primary animated fadeInUp delay03">Get in Touch</a>
+            <a href="#" class="button button--orange btn--primary animated fadeInUp delay03">Get in Touch</a>
+            <a href="#" class="button button--thin btn--primary animated fadeInUp delay03">Get in Touch</a>
+            <a href="#" class="btn btn--primary animated fadeInUp delay03">Get in Touch</a>
+        -->
+
+            <!--
             <nav>
                 <ul>
                     <li><a href="#our-beginning">Home</a></li>
@@ -107,6 +140,7 @@
                     <li><a href="#testimonials">Contact us</a></li>
                 </ul>
             </nav>
+            -->
 
         </header>
 
@@ -117,20 +151,45 @@
 
             <!-- The <section> element can be used to enclose content that comes under a related heading.
             NOTE: The <section> element can contain <article> elements and vice versa, if you think the content warrants it. -->
+
             <section id="hero-section">
 
                 <div class="large-hero">
+<!--
+                    <picture>
+                          <source srcset="assets/img/hero--large.jpg 1920w, assets/img/hero--large-hi-dpi.jpg 3840w" media="(min-width: 1380px)">
+                          <source srcset="assets/img/hero--medium.jpg 1380w, assets/img/hero--medium-hi-dpi.jpg 2760w" media="(min-width: 990px)">
+                          <source srcset="assets/img/hero--small.jpg 990w, assets/img/hero--small-hi-dpi.jpg 1980w" media="(min-width: 640px)">
+                          <img srcset="assets/img/hero--smaller.jpg 640w, assets/img/hero--smaller-hi-dpi.jpg 1280w" alt="Coastal view of ocean and mountains">
+                    </picture>
 
-                    <img src="assets/img/hero-sliders/hero-digital-marketing--large.jpg" width="100%" />
+-->
+                    <picture>
+                        <source class="large-hero--image" srcset="assets/img/hero-sliders/bg-her-dgties-marketing-01-xlarge-hi-dpi-02.jpg 5120w, assets/img/hero-sliders/bg-her-dgties-marketing-01-xlarge-02.jpg 2560w" media="(min-width: 1800px)">
 
-                    <div class="large-hero__text-content">
+                        <source  class="large-hero--image"  srcset="assets/img/hero-sliders/bg-hero-dgties-marketing-01-xlarge-hi-dpi-02.jpg 5120w, assets/img/hero-sliders/bg-hero-dgties-marketing-01-xlarge-02.jpg 2560w" media="(min-width: 1200px)">
 
-                        <h6><span>Digital Marketing</span></h6>
-                        <h1><a href="#">MAKING STORIES</a></h1>
-                        <p> 
-                            “We’re entering an era of real-time marketing. If you’re not engaged in that conversation, you’re going to miss out.” - Reggie Bradford, Oracle Senior Vice President of Product Development<br/><br/>We publish tales of your story and strategically engage your customers. Let us create an impressive presence for you in the digital space.
-                        </p>
-                        <a class="" href="#">Details</a>
+                        <source  class="large-hero--image"  srcset="assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-hi-dpi-03.jpg 3072w, assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-03.jpg 1536w" media="(min-width: 900px)">
+
+                        <source  class="large-hero--image"  srcset="assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-hi-dpi-03.jpg 3072w, assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-03.jpg 1536w" media="(min-width: 600px)">
+
+                        <img srcset="assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-hi-dpi-02.jpg 1536w, assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-02.jpg 768w" alt="Digital Marketing">
+                    </picture>
+
+                    <div class="large-hero--text-content">
+
+                        <div class="wrapper">
+
+                            <h6 class="large-hero--category large-hero--category--yellow large-hero--category--uppercase  animated fadeIn delay03">Digital Marketing</h6>
+                            <h2 class="large-hero--title large-hero--title--uppercase animated fadeInLeft delay03">
+                                <a class="large-hero--title--blue" href="#">Making Stories</a>
+                            </h1>
+                            <p class="large-hero--description large-hero--description--blue animated fadeIn delay03"> 
+                                “We’re entering an era of real-time marketing. If you’re not engaged in that conversation, you’re going to miss out.” - Reggie Bradford, Oracle Senior Vice President of Product Development<br/><br/>We publish tales of your story and strategically engage your customers. Let us create an impressive presence for you in the digital space.
+                            </p>
+                            <a class="button button--thin animated fadeInUp delay03" href="#">Start a Campaign</a>
+
+                        </div>
 
                     </div>
 
@@ -140,21 +199,52 @@
 
             <section id="our-beginning-section">
 
-                <div id="our-beginning">
+                <div id="our-beginning" class="page-section">
 
-                    <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
-                    <article id="the-first-trip">
+                    <div class="wrapper">
 
-                        <h2>The first trip we planned was our own.</h2>
-                        <h3>Ever since, we&rsquo;ve been working to make travel better for everyone.</h3>
-                        <img src="assets/img/first-trip.jpg" alt="Couple walking down a street.">
-                        <img src="assets/img/our-start.jpg" alt="Our founder, Jane Doe">
-                        <h2>Here&rsquo;s how we got started&hellip;</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="#">quis nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Duis aute irure dolor in <strong>reprehenderit in</strong> voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum velit esse cillum <strong>dolore eu fugiat.</strong></p>
+                        <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
+                        <!--<article id="the-first-trip">-->
 
-                    </article>
+                            <h2 class="headline headline--centered headline--light headline--b-margin-small">The first trip we planned <strong>was our own.</strong></h2>
+                            <h3 class="headline headline--centered headline--light headline--orange headline--small headline--narrow headline--b-margin-large">Ever since, we&rsquo;ve been working to make travel <stron>better for everyone.</stron></h3>
+
+                            <div class="wrapper wrapper--medium wrapper--b-margin">
+                                <img sizes="(min-width: 970px) 976px, 100vw" srcset="assets/img/first-trip-low-res-i.jpg 565w, assets/img/first-trip-i.jpg 976w, assets/img/first-trip-hi-dpi-i.jpg 1952w" alt="Couple walking down a street.">
+                            </div>
+
+                            <div class="row row--gutters">
+
+                                <div class="row--medium-4 row--medium-4--larger row--b-margin-until-medium">
+                                    <picture>
+
+                                        <!-- Video 24 - Attention to Detail - Part 1 -->
+                                        <source sizes="404px srcset="assets/img/our-start-i.jpg 404w, assets/img/our-start-hi-dpi-i.jpg 808w" media="(min-width: 1020px)">
+                                        <source sizes="320px" srcset="assets/img/our-start-portrait-i.jpg 382w, assets/img/our-start-portrait-hi-dpi-i.jpg 764w" media="(min-width: 900px)">
+                                        <img srcset="assets/img/our-start-landscape-i.jpg 800w, assets/img/our-start-landscape-hi-dpi-i.jpg 1600w" alt="Our founder, Jane Doe">    
+                                    </picture>
+                                    
+                                </div>
+
+                                <div class="row--medium-8 row--medium-8--smaller">
+
+                                    <div class="generic-content-container">
+
+                                        <h2 class="headline headline--t-no-margin">Here&rsquo;s how we got started&hellip;</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="#">quis nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <p>Duis aute irure dolor in <strong>reprehenderit in</strong> voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum velit esse cillum <strong>dolore eu fugiat.</strong></p>    
+
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+
+                        <!--</article>-->
+
+                    </div>
 
                 </div>
 
@@ -162,58 +252,62 @@
   
             <section id="features-section">
 
-                <div id="features">
+                <div id="features" class="page-section page-section--blue">
 
-                    <img src="assets/img/icons/star.svg">
-                    <h2>Our Features</h2>
-                    
-                    <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
-                    <article id="weather">
+                    <div class="wrapper">
 
-                        <!-- A <header> element is not required here as the heading only contains a single <h3> element -->
-                        <img src="assets/img/icons/rain.svg">
-                        <h3>We&rsquo;ll Watch the Weather</h3>
+                        <img src="assets/img/icons/star.svg">
+                        <h2>Our Features</h2>
+                        
+                        <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
+                        <article id="weather">
 
-                        <!-- Content -->
-                        <p>Download our app and we&rsquo;ll send you a notice if it&rsquo;s about to rain in the next 20 minutes around your current location. A good rain can be refreshing, but sometimes you just want to stay dry.</p>
+                            <!-- A <header> element is not required here as the heading only contains a single <h3> element -->
+                            <img src="assets/img/icons/rain.svg">
+                            <h3>We&rsquo;ll Watch the Weather</h3>
 
-                    </article>
+                            <!-- Content -->
+                            <p>Download our app and we&rsquo;ll send you a notice if it&rsquo;s about to rain in the next 20 minutes around your current location. A good rain can be refreshing, but sometimes you just want to stay dry.</p>
 
-                    <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
-                    <article id="guides">
+                        </article>
 
-                        <!-- A <header> element is not required here as the heading only contains a single <h3> element -->
-                        <img src="assets/img/icons/globe.svg">
-                        <h3>Global Guides</h3>
+                        <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
+                        <article id="guides">
+
+                            <!-- A <header> element is not required here as the heading only contains a single <h3> element -->
+                            <img src="assets/img/icons/globe.svg">
+                            <h3>Global Guides</h3>
 
 
-                        <p>We&rsquo;ve scoured the entire planet for the best retreats and beautiful vistas. If there&rsquo;s a corner of the world you want to escape to we know the most scenic and inspiring locations.</p>
+                            <p>We&rsquo;ve scoured the entire planet for the best retreats and beautiful vistas. If there&rsquo;s a corner of the world you want to escape to we know the most scenic and inspiring locations.</p>
 
-                    </article>
+                        </article>
 
-                    <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
-                    <article id="wifi-spots">
+                        <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
+                        <article id="wifi-spots">
 
-                        <!-- A <header> element is not required here as the heading only contains a single <h3> element -->
-                        <img src="assets/img/icons/wifi.svg">
-                        <h3>Wi-Fi Waypoints</h3>
+                            <!-- A <header> element is not required here as the heading only contains a single <h3> element -->
+                            <img src="assets/img/icons/wifi.svg">
+                            <h3>Wi-Fi Waypoints</h3>
 
-                        <!-- Content -->
-                        <p>We only send you on trips to places we can personally vouch for as being amazing. Which means we&rsquo;ve mapped out where local wi-fi spots are and marked them in our app&rsquo;s map view.</p>
+                            <!-- Content -->
+                            <p>We only send you on trips to places we can personally vouch for as being amazing. Which means we&rsquo;ve mapped out where local wi-fi spots are and marked them in our app&rsquo;s map view.</p>
 
-                    </article>
+                        </article>
 
-                    <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
-                    <article id="survival-kit">
+                        <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
+                        <article id="survival-kit">
 
-                        <!-- A <header> element is not required here as the heading only contains a single <h3> element -->
-                        <img src="assets/img/icons/fire.svg">
-                        <h3>Survival Kit</h3>
+                            <!-- A <header> element is not required here as the heading only contains a single <h3> element -->
+                            <img src="assets/img/icons/fire.svg">
+                            <h3>Survival Kit</h3>
 
-                        <!-- Content -->
-                        <p>Everytime you book an escape with us we send you a survival kit with the finest materials. The kit will allow you to setup a tent, start a fire, scratch your own back and lower your taxes.</p>
+                            <!-- Content -->
+                            <p>Everytime you book an escape with us we send you a survival kit with the finest materials. The kit will allow you to setup a tent, start a fire, scratch your own back and lower your taxes.</p>
 
-                    </article>
+                        </article>
+
+                    </div>
 
                 </div>
 
@@ -221,7 +315,7 @@
 
             <section id="testimonials-section">
 
-                <div id="testimonials">
+                <div id="testimonials" class="page-section">
 
                     <img src="assets/img/icons/comment.svg">
                     <h2>Real Testimonials</h2>

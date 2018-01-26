@@ -451,9 +451,16 @@ template {
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
-	color: #2f5572;
+	font-family: sans-serif;
+	
+	/*font-family: 'Roboto', sans-serif;*/
+	/*color: $mainBlue;*/
 	/*columns: 300px 2 ;*/
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .box a {
@@ -461,21 +468,627 @@ body {
 		padding: 10px;
 	}
 
+a {
+	/*text-decoration: none;*/
+	color: #d59541;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.delay03 {
+	animation-delay: 0.3s;
+	-webkit-animation-delay: 0.3s;
+}
+
+.delay05 {
+	animation-delay: 0.5s;
+	-webkit-animation-delay: 0.5s;
+}
+
+.delay08 {
+	animation-delay: 0.8s;
+	-webkit-animation-delay: 0.8s;
+}
+
+.delay12 {
+	animation-delay: 1.2s;
+	-webkit-animation-delay: 1.2s;
+}
+
+.animated{-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:0.5s;animation-duration:0.5s;}
+
+.animated.hinge{-webkit-animation-duration:2s;animation-duration:2s;}
+
+@-webkit-keyframes flip {
+	0% {
+		-webkit-transform: perspective(400px) rotateY(0);
+		-webkit-animation-timing-function: ease-out;
+	}	40% {
+		-webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg);
+		-webkit-animation-timing-function: ease-out;
+	}
+	50% {
+		-webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+		-webkit-animation-timing-function: ease-in;
+	}
+	80% {
+		-webkit-transform: perspective(400px) rotateY(360deg) scale(.95);
+		-webkit-animation-timing-function: ease-in;
+	}
+	100% {
+		-webkit-transform: perspective(400px) scale(1);
+		-webkit-animation-timing-function: ease-in;
+	}
+}
+
+@-webkit-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-20px);
+		        transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
+	}
+}
+
+.fadeInLeft {
+	-webkit-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+		        transform: translateY(20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+}
+
+.fadeInUp {
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
+
+/*
+.hero{
+	width: 100%;
+  	background-image:url('../../assets/img/hero-sliders/bg-hero-dgties-marketing-01-small-02.jpg');
+  	background-size:cover;
+  	position:relative;
+  	height:100vh;
+
+
+	@mixin atMedium {
+		background-image:url('../../assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-02.jpg');
+  	}
+}
+*/
+
 .large-hero {
 	position: relative;
-}
+	cursor: -webkit-grab;
 
-.large-hero__text-content {
-	position: absolute;
+	border-bottom: 2px solid #292f6f;
 
-	/* Center Vertically */
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	        transform: translateY(-50%);
 	
-	left: 0;
+	
 
-	/* Center Horizontally */
-	width: 100%;
-	text-align: center;
+
+
 }
+
+.large-hero--image {
+		max-width: 100%;
+		height: auto;
+
+		/*
+		Remove white space below image and above 
+		large-hero border-bottom
+
+		NOTE: <img> is inline by default, meaning it treats <img>
+			  like an "line of text" (inline) and leaves room below 
+			  it (i.e. bottom) for certain letters which hang below
+			  like the letters 'g', 'y'. If an element is defined to 
+			  display as a "block", it is told to display the element
+			  like a "reactangle" or a "box" without any room below.
+		*/
+		display: block;
+	}
+
+.large-hero--text-content {
+		text-align: center;
+
+		/* Position */
+		position: absolute;
+
+		/* Below Hero Image */
+		/*
+		bottom: 3rem;
+		*/
+		top: 50%;
+		bottom: auto;
+		
+		/* Narrow Text Area */
+		left: 10%;
+		margin-right: 10%;
+
+	}
+
+/*transform: translate(0, $translateY);*/
+
+@media (min-width: 600px) {
+
+.large-hero--text-content {
+			/* Narrow Text Area */
+			left: 20%;
+			margin-right: 20%
+
+	}
+	}
+
+/* Offset position by percentage of text-content height */
+
+@media (min-width: 900px) {
+
+.large-hero--text-content {
+			text-align: left;
+			left: 5%;
+			max-width: 33.33%
+
+	}
+	}
+
+.large-hero--category {
+		/* Remove Margins */
+		margin: 0 0 0 0 ;
+
+		font-size: .95rem;
+
+	}
+
+.large-hero--category--thin {
+			font-weight: 100;
+		}
+
+.large-hero--category--thick {
+			font-weight: bold;
+		}
+
+.large-hero--category--yellow {
+			/* Font Color & Size */
+			color: #f9d83f;	
+		}
+
+.large-hero--category--uppercase {
+			text-transform: uppercase;
+		}
+
+@media (min-width: 600px) {
+
+.large-hero--category {
+			font-size: 1.1rem
+
+	}
+	}
+
+@media (min-width: 900px) {
+
+.large-hero--category {
+			font-size: .75rem
+
+	}
+	}
+
+.large-hero--title {
+		/* Remove Margins */
+		margin: 0 0 0 0 ;
+
+		/* Font Size */
+		
+		font-size: 1.45rem;
+		font-weight: normal;
+
+		/* Offset Top Margin */
+		margin-top: .25rem;
+	}
+
+.large-hero--title--blue {
+			color: #292f6f;
+		}
+
+.large-hero--title--uppercase {
+			text-transform: uppercase;
+		}
+
+@media (min-width: 600px) {
+
+.large-hero--title {
+			font-size: 2.1rem
+	}
+	}
+
+@media (min-width: 900px) {
+
+.large-hero--title {
+			font-size: 1.55rem
+	}
+	}
+
+.large-hero--description {
+
+		/* Remove Margins */
+		margin: 0 0 0 0;
+
+		/* Font Size */
+		font-size: 1rem;
+		font-weight: 100;
+
+		/* line-height */
+		line-height: 1.3;
+
+		/* Offset Top and Botton Margin */
+		margin-top: .5rem;
+		margin-bottom: 1rem;
+
+		/* Trucate with Ellipsis */
+
+		display: block; /* Fallback for non-webkit */
+  		display: -webkit-box;
+  		max-width: 100%;
+  		height: 1rem*1.3*2; /* Fallback for non-webkit */
+  		-webkit-line-clamp: 2;
+  		-webkit-box-orient: vertical;
+  		overflow: hidden;
+  		text-overflow: ellipsis;
+		
+	}
+
+.large-hero--description--blue {
+  			color: #292f6f;
+  		}
+
+@media (min-width: 600px) {
+
+.large-hero--description {
+			font-size: 1.2rem;	
+
+			/* Trucate with Ellipsis */
+
+	  		height: 1.2rem*1.3*5; /* Fallback for non-webkit */
+	  		-webkit-line-clamp: 5;
+	  		-webkit-box-orient: vertical;*/
+	  		text-overflow: ellipsis
+		
+	}
+	}
+
+@media (min-width: 900px) {
+
+.large-hero--description {
+			font-size: .95rem;
+
+			/* line-height */
+			line-height: 1.3;
+
+			/* Offset Top and Botton Margin */
+			margin-top: .3rem;
+			margin-bottom: .8rem;
+
+			/* Trucate with Ellipsis */
+
+	  		height: .95rem*1.3*10; /* Fallback for non-webkit */
+	  		-webkit-line-clamp: 10;
+	  		-webkit-box-orient: vertical;*/
+	  		text-overflow: ellipsis
+		
+	}
+	}
+
+.btn {
+	background: transparent;
+	-webkit-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+}
+
+.btn--primary {
+		color: #57c7d8;
+
+	    /*padding: 6px 12px;*/
+	    padding: .35rem .75rem;
+	    margin-bottom: 0;
+	    font-size: 16px;
+	    font-weight: normal;
+	    line-height: 1.5;
+	    text-align: center;
+	    vertical-align: middle;
+	    cursor: pointer;
+	    border: 1px solid #57c7d8;
+	    border-radius: 4px;
+	    white-space: nowrap;
+	    -webkit-user-select: none;
+	       -moz-user-select: none;
+	        -ms-user-select: none;
+	            user-select: none;
+	    display: inline-block;
+	}
+
+.button {
+	background-color: #292f6f;
+	color: #FFF;
+	text-decoration: none;
+	padding: .75rem .75rem;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+/* So that its parent and surrounding elements will be aware of its vertical padding */
+
+.button--orange {
+		background-color: #d59541;
+	}
+
+.button--thin {
+		background: transparent;
+		color: #57c7d8;
+		border: 1px solid #57c7d8;
+	}
+
+@media (min-width: 900px) {
+
+.button {
+		font-size: .95rem
+}
+	}
+
+/*@import "modules/_header";*/
+
+/*@import "modules/_hero";*/
+
+.wrapper {
+	/*background-color: green;*/
+	padding-left: 18px;
+	padding-right: 18px;
+
+	overflow: hidden;
+
+	/* Limit Content to !!!1200px!!! and center wrapper box in screen horizontally */
+	/*background-color: yellow;*/
+	max-width: 1200px + 36px;	/* Add 36px = 18px * 2 from Padding to account for box-sizing */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wrapper--medium {
+		max-width: 976px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+/* Remove Padding for all .wrappers's within a .wrapper */
+
+.wrapper .wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+.wrapper--b-margin {
+		margin-bottom: 1rem;
+	}
+
+@media (min-width: 900px) {
+
+.wrapper--b-margin {
+			margin-bottom: 3.875rem
+	}
+	}
+
+.page-section {
+	padding: 1.2rem 0;
+}
+
+.page-section--blue {
+		background-color: #292f6f;
+		color: #FFF;
+	}
+
+@media (min-width: 600px) {
+
+.page-section {
+		padding: 2.0rem 0
+}
+	}
+
+@media (min-width: 900px) {
+
+.page-section {
+		padding: 4.5rem 0
+}
+	}
+
+/* h2 */
+
+.headline {
+	font-weight: 300;
+	font-size: 1.9;
+	color: #292f6f;
+}
+
+.headline--centered {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+.headline--orange {
+		color: #d59541;
+	}
+
+.headline--upper {
+		text-transform: uppercase;;
+	}
+
+/* h3 */
+
+.headline--small {
+		font-size: 1.2rem;
+	}
+
+@media (min-width: 900px) {
+
+.headline--small {
+			font-size: 1.875
+	}
+	}
+
+.headline--narrow {
+		max-width: 500px;
+	}
+
+.headline--light {
+		font-weight: 100;
+	}
+
+.headline--b-margin-small {
+		margin-bottom: .5em;
+	}
+
+.headline--b-margin-large {
+		margin-bottom: 1.6em;	
+	}
+
+.headline--t-no-margin {
+		margin-top: 0;
+	}
+
+@media (min-width: 900px) {
+
+.headline {
+		font-size: 2.875
+}
+	}
+
+/*background-color: yellow;*/
+
+.row::after{
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+.row--gutters {
+		margin-right: -65px;
+	}
+
+/* '>', means all direct children that use the tag 'div' */
+
+.row--gutters > div {
+		padding-right: 65px;
+	}
+
+/* 
+		parent > children {
+	
+		}
+		.row--gutters > div {
+	
+		}
+	*/
+
+.row--b-margin-until-medium {
+		margin-bottom: 1rem;
+	}
+
+@media (min-width: 900px) {
+
+		.row--b-margin-until-medium {
+			margin-bottom: 0;
+		}
+
+		.row--medium-4 {
+			float: left;
+			width: 33.33%;
+		}
+
+			.row--medium-4--larger {
+				float: left;
+				width: 37%;
+			}
+
+		.row--medium-8 {
+			float: left;
+			width: 66.66%;
+		}
+
+			.row--medium-8--smaller {
+				float: left;
+				width: 63%;
+			}
+	}
+
+.generic-content-container p {
+		line-height: 1.65;
+		margin: 1.8rem 0;
+	}
+
+@media (min-width: 600px) {
+
+.generic-content-container p {
+			font-size: 1.125rem
+	}
+	}
+
+.generic-content-container p a {
+		font-weight: 700;
+	}

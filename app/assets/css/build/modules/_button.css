@@ -1,0 +1,46 @@
+.btn {
+	background: transparent;
+	transition: all 0.1s ease-out;
+
+	&--primary {
+		color: $mainLightBlue;
+
+	    /*padding: 6px 12px;*/
+	    padding: .35rem .75rem;
+	    margin-bottom: 0;
+	    font-size: 16px;
+	    font-weight: normal;
+	    line-height: 1.5;
+	    text-align: center;
+	    vertical-align: middle;
+	    cursor: pointer;
+	    border: 1px solid $mainLightBlue;
+	    border-radius: 4px;
+	    white-space: nowrap;
+	    user-select: none;
+	    display: inline-block;
+	}
+}
+
+.button {
+	background-color: $mainBlue;
+	color: $mainWhite;
+	text-decoration: none;
+	padding: .75rem .75rem;
+	border-radius: 4px;
+	display: inline-block; /* So that its parent and surrounding elements will be aware of its vertical padding */
+
+	&--orange {
+		background-color: $mainOrange;
+	}
+
+	&--thin {
+		background: transparent;
+		color: $mainLightBlue;
+		border: 1px solid $mainLightBlue;
+	}
+
+	@mixin atMedium {
+		font-size: .95rem;
+	}
+}

@@ -1,0 +1,34 @@
+.wrapper {
+	/*background-color: green;*/
+	padding-left: 18px;
+	padding-right: 18px;
+
+	overflow: hidden;
+
+	/* Limit Content to !!!1200px!!! and center wrapper box in screen horizontally */
+	/*background-color: yellow;*/
+	max-width: 1200px + 36px;	/* Add 36px = 18px * 2 from Padding to account for box-sizing */
+	margin-left: auto;
+	margin-right: auto;
+	
+
+	&--medium {
+		max-width: 976px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	/* Remove Padding for all .wrappers's within a .wrapper */
+	.wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&--b-margin {
+		margin-bottom: 1rem;
+
+		@mixin atMedium {
+			margin-bottom: 3.875rem;			
+		}
+	}
+}

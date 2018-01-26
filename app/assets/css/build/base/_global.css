@@ -1,9 +1,17 @@
-$mainBlue: #2f5572;
+
 
 body {
-	font-family: 'Roboto', sans-serif;
-	color: $mainBlue;
+	font-family: sans-serif;
+	
+	/*font-family: 'Roboto', sans-serif;*/
+	/*color: $mainBlue;*/
 	/*columns: 300px 2 ;*/
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .box {
@@ -12,4 +20,13 @@ body {
 		display: block;
 		padding: 10px;
 	}
+}
+
+a {
+	/*text-decoration: none;*/
+	color: $mainOrange;
+}
+
+* {
+	box-sizing: border-box;
 }
