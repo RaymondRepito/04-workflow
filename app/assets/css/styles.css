@@ -897,7 +897,7 @@ a {
 /*@import "modules/_hero";*/
 
 .wrapper {
-	/*background-color: green;*/
+	background-color: green;
 	padding-left: 18px;
 	padding-right: 18px;
 
@@ -911,7 +911,7 @@ a {
 }
 
 .wrapper--medium {
-		max-width: 976px;
+		max-width: 200px;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -1019,7 +1019,11 @@ a {
 }
 	}
 
-/*background-color: yellow;*/
+.row {
+
+	overflow: hidden;
+	background-color: yellow;
+}
 
 .row::after{
 		content: "";
@@ -1031,10 +1035,14 @@ a {
 		margin-right: -65px;
 	}
 
+.row--gutters-large {
+		margin-right: -100px;
+	}
+
 /* '>', means all direct children that use the tag 'div' */
 
-.row--gutters > div {
-		padding-right: 65px;
+.row--gutters-large > div {
+		padding-right: 100px;
 	}
 
 /* 
@@ -1046,6 +1054,10 @@ a {
 		}
 	*/
 
+.row--gutters > div {
+		padding-right: 65px;
+	}
+
 .row--b-margin-until-medium {
 		margin-bottom: 1rem;
 	}
@@ -1056,22 +1068,27 @@ a {
 			margin-bottom: 0;
 		}
 
-		.row--medium-4 {
+		.row__medium-4 {
 			float: left;
 			width: 33.33%;
 		}
 
-			.row--medium-4--larger {
+			.row__medium-4--larger {
 				float: left;
 				width: 37%;
 			}
 
-		.row--medium-8 {
+		.row__medium-6 {
+			float: left;
+			width: 50%;
+		}
+
+		.row__medium-8 {
 			float: left;
 			width: 66.66%;
 		}
 
-			.row--medium-8--smaller {
+			.row__medium-8--smaller {
 				float: left;
 				width: 63%;
 			}
@@ -1091,4 +1108,18 @@ a {
 
 .generic-content-container p a {
 		font-weight: 700;
+	}
+
+.section-title {
+	font-size: 3.75rem;
+	font-weight: 300;
+	text-align: center;
+}
+
+.section-title strong {
+		font-weight: 500;
+	}
+
+.section-title__icon {
+		margin-right: .5rem;
 	}

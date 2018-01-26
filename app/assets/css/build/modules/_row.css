@@ -1,11 +1,16 @@
 .row {
 
-	/*background-color: yellow;*/
+	overflow: hidden;
+	background-color: yellow;
 
 	@mixin clearfix;
 
 	&--gutters {
 		margin-right: -65px;
+	}
+
+	&--gutters-large {
+		margin-right: -100px;
 	}
 
 	/* 
@@ -17,6 +22,10 @@
 		}
 	*/
 	/* '>', means all direct children that use the tag 'div' */
+	&--gutters-large > div {
+		padding-right: 100px;
+	}
+
 	&--gutters > div {
 		padding-right: 65px;
 	}
@@ -31,7 +40,7 @@
 			margin-bottom: 0;
 		}
 
-		&--medium-4 {
+		&__medium-4 {
 			float: left;
 			width: 33.33%;
 
@@ -41,7 +50,12 @@
 			}
 		}
 
-		&--medium-8 {
+		&__medium-6 {
+			float: left;
+			width: 50%;
+		}
+
+		&__medium-8 {
 			float: left;
 			width: 66.66%;
 
