@@ -1602,3 +1602,155 @@ a {
 			margin-right: 1.4rem
 	}
 	}
+
+.site-header {
+	padding: 10px 0;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+
+@media (min-width: 900px) {
+
+.site-header {
+		background-color: rgba(41,47,111, .3)
+}
+	}
+
+.site-header__button-container {
+		float: right;
+	}
+
+.site-header__logo {
+		position: absolute;
+		
+		/* 	
+			The element will occupy only as much as it needs. 
+			So if we want it to occupy the full width, we set width=100%!!!
+
+			Especially if .SVG, it will occupy ZERO SPACE and you will
+			not see it without setting width=100%!!!
+
+			However, width=100% must be removed when sprites are used instead of <img>
+		*/
+		/*
+		width: 100%;
+		*/
+
+		background-color: rgba(41,47,111, 1);
+		padding: 25px 36px;
+
+		/* Offset .site-header padding of 10px above */
+		/*
+		top: 50%;
+		left: 10%;
+		transform: translate(-50%, -50%) scale(.1);*/
+		left: 50%;
+		-webkit-transform: translateX(-50%) scale(.1);
+		        transform: translateX(-50%) scale(.1);
+
+		/*
+			transform-origin: x y
+			y=0, make topmost the origin, y=100, make bottom-most the origin
+		*/
+		-webkit-transform-origin: 50% -1%;
+		        transform-origin: 50% -1%;
+		
+	}
+
+/* Do not Center for larger screens: RESET */
+
+@media (min-width: 900px) {
+
+.site-header__logo {
+			left: auto;
+			-webkit-transform: translateX(0) scale(.1);
+			        transform: translateX(0) scale(.1);
+			-webkit-transform-origin: 0 -1%;
+			        transform-origin: 0 -1%
+		
+	}
+	}
+
+/* Hide Logo HTML TEXT inside of <div> */
+
+.site-header--logo--graphic {
+		text-indent: -99999px;
+	}
+
+.site-header__menu-icon {
+		width: 20px;
+		height: 20px;
+		background-color: #FFF;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+@media (min-width: 900px) {
+
+.site-header__menu-icon {
+			display: none
+	}
+	}
+
+.site-header__menu-content {
+
+		display: none;
+	}
+
+/* Not visible in small scrveens */
+
+@media (min-width: 900px) {
+
+.site-header__menu-content {
+			display: block
+	}
+	}
+
+.site-header .icon--logo {
+		background-size: 250px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+.primary-nav--pull-right {
+		float: right;
+	}
+
+/* ALL <ul> under .primar-nav */
+
+.primary-nav ul {
+		margin: 0;
+		padding: 0;
+	}
+
+/* Fix floated children (i.e. <li> below) */
+
+.primary-nav ul::after{
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+/* ALL <li> under .primar-nav */
+
+.primary-nav li {
+		list-style: none;
+		float: left;	/* Make them all sit on one line */
+		padding-right: 20px;
+	}
+
+.primary-nav a {
+		text-decoration: none;
+		color: #FFF;
+		font-weight: 300;
+
+		/* WHAT IS THIS FOR! at 5mins remaning in Training VIdeo 36 this does not exist yet */
+		
+		/* Adjust Padding to center vertically on the nav bar */
+		/* Padding will have no effect if DISPLAY <> BLOCK */
+		display: block;
+		padding: 12px 0;
+
+	}

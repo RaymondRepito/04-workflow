@@ -114,33 +114,66 @@
         <!-- The page header typically contains items such as your site heading, logo and possibly the main site navigation -->
         <!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
         
-        <header role="banner">
+        <header role="banner" class="site-header">
                 
-            
-            
-            <!--
-            <img class="header-logo" src="assets/img/icons/DGTIES_FA_HORIZONTAL_FLAT_colored_2018_01_22.svg" width="230rem"/>
-            -->
+            <div class="wrapper">
+                
+                <div class="site-header__logo">
 
-            <!--
-            <a href="#" class="button btn--primary animated fadeInUp delay03">Get in Touch</a>
-            <a href="#" class="button button--orange btn--primary animated fadeInUp delay03">Get in Touch</a>
-            <a href="#" class="button button--thin btn--primary animated fadeInUp delay03">Get in Touch</a>
-            <a href="#" class="btn btn--primary animated fadeInUp delay03">Get in Touch</a>
-        -->
+                    <!--*******************
+                        PART I: USING <img> 
+                        ******************* -->
+                    <!--  I.A
+                        WILL NOT DISPLAY after position:absolute without width=100% since it is a VECTOR (SVG).
+                    -->
+                    <!--
+                    <img src="assets/img/icons/DGTIES_FA_HORIZONTAL_FLAT_colored_2018_01_22.svg"/>
+                    -->
 
-            <!--
-            <nav>
-                <ul>
-                    <li><a href="#our-beginning">Home</a></li>
-                    <li><a href="#features">Services</a></li>
-                    <li><a href="#testimonials">Company</a></li>
-                    <li><a href="#testimonials">Blog</a></li>
-                    <li><a href="#testimonials">Careers</a></li>
-                    <li><a href="#testimonials">Contact us</a></li>
-                </ul>
-            </nav>
-            -->
+                    <!-- I.B
+                        Will display even if after position:absolute without width=100% since it is not a vector (PNG)
+                    -->
+                    <!--
+                    <img src="assets/img/DGTIES_FA_HORIZONTAL_FULL_colored_brand_250px_100x.png"/>
+                    -->
+
+                    <!--**********************
+                        PART II: USING SPRITES 
+                        ********************** -->
+                    <div class="site-header--logo--graphic icon icon--DGTIES_FA_HORIZONTAL_FLAT_colored_2018_01_22">DGTIES Creative Solutions</div>
+                    <!--
+                        <div class="icon icon--DGTIES_FA_HORIZONTAL_FLAT_colored_2018_01_22">DGTIES Creative Solutions</div>
+                    -->
+                </div>
+                
+                <div class="site-header__menu-icon">
+                </div>
+
+                <div class="site-header__menu-content">
+
+                    <!--
+                    <a href="#" class="button btn--primary animated fadeInUp delay03">Get in Touch</a>
+                    <a href="#" class="button button--orange btn--primary animated fadeInUp delay03">Get in Touch</a>
+                    <a href="#" class="button button--thin btn--primary animated fadeInUp delay03">Get in Touch</a>
+                    <a href="#" class="btn btn--primary animated fadeInUp delay03">Get in Touch</a>
+                -->
+                    <div class="site-header__button-container">
+                        <a href="#" class="button">Get in Touch</a>
+                    </div>
+
+                    <nav class="primary-nav primary-nav--pull-right">
+                        <ul>
+                            <li><a href="#our-beginning">Home</a></li>
+                            <li><a href="#features">Services</a></li>
+                            <li><a href="#testimonials">Company</a></li>
+                            <li><a href="#testimonials">Blog</a></li>
+                            <li><a href="#testimonials">Careers</a></li>
+                            <li><a href="#testimonials">Contact us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
 
         </header>
 
