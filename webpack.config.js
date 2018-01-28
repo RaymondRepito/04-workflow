@@ -8,10 +8,10 @@ const path = require('path');
 /* path: needs to be an absoulte path instead of a relative 
 	path './tmp/assets/js' . we use path.resolve */
 module.exports = {
-	entry: "./src/assets/js/scripts.js",
+	entry: "./src/assets/js/App.js",
 	output: {
 		path: path.resolve(__dirname, "./tmp/assets/js"),
-		filename: "scripts.js"
+		filename: "App.js"
 	},
 	module: {
 		loaders: [

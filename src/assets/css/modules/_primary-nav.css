@@ -1,7 +1,16 @@
 .primary-nav {
 
+	padding-top: 10px;
+
+	@mixin atMedium {
+		padding-top: 0;
+	}
+
 	&--pull-right {
-		float: right;
+
+		@mixin atMedium {
+			float: right; /* FLoat only for larger screens */
+		}
 	}
 
 	/* ALL <ul> under .primar-nav */
@@ -16,8 +25,25 @@
 	/* ALL <li> under .primar-nav */
 	li {
 		list-style: none;
-		float: left;	/* Make them all sit on one line */
-		padding-right: 20px;
+		padding-right: 7px;
+		display: inline-block;
+
+		@mixin atMedium {
+			float: left;	/* Make them all sit on one line; Only for larger screens */
+			display: block;	/* Reset */
+			padding-right: 20px;
+		}
+	}
+
+	/* This one is needed only if 'li' is made inline-block. This is done only just to save
+	the unneeded 20px padding for the last element if the 'li' items were displayed
+	inline-block */
+	li:last-child {
+		padding-right: 0;
+
+		@mixin atMedium {
+			padding-right: 20px;			
+		}
 	}
 
 	a {
@@ -30,7 +56,14 @@
 		/* Adjust Padding to center vertically on the nav bar */
 		/* Padding will have no effect if DISPLAY <> BLOCK */
 		display: block;
-		padding: 12px 0;
+		padding: 5px 8px;
+		font-size: .8rem;
+		background-color: rgba($mainBlue, .5);
 
+		@mixin atMedium {
+			padding: 12px 0;
+			font-size: 1rem;
+			background-color: rgba($mainBlue, 0);
+		}
 	}
 }

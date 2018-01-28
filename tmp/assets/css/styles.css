@@ -1612,7 +1612,16 @@ a {
 	position: absolute;
 	width: 100%;
 	z-index: 2;
+
+	/* When background-color value changes, use ease-out 
+	   transition style for a transition duration of .3s */
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
 }
+
+.site-header--is-expanded {
+		background-color: rgba(41,47,111, .55);
+	}
 
 @media (min-width: 900px) {
 
@@ -1621,8 +1630,11 @@ a {
 }
 	}
 
+@media (min-width: 900px) {
+
 .site-header__button-container {
-		float: right;
+			float: right	/* Float right only for bigger screens */
+	}
 	}
 
 .site-header__logo {
@@ -1684,33 +1696,156 @@ a {
 
 .site-header__menu-icon {
 		width: 20px;
-		height: 20px;
-		background-color: #FFF;
+		height: 19px;	/* changed form 20px to 19px so that hamburger lines will be evenly spaced */
+		/* even if this is removed, and becomes transparent, it can still be clicked */
+		/*background-color: $mainWhite;*/
 		position: absolute;
 		top: 10px;
 		right: 10px;
+		z-index: 10;
+
+		
 	}
+
+/* &__top { */
+
+.site-header__menu-icon::before {
+			content: "";	/* Must be present otherwise width and height will both be zero */
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color: #FFF;
+			-webkit-transform-origin: 0% 0%;
+			        transform-origin: 0% 0%;	/* left top corner of element */
+			-webkit-transition: -webkit-transform .3s ease-out;
+			transition: -webkit-transform .3s ease-out;
+			transition: transform .3s ease-out;
+			transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+		}
+
+.site-header__menu-icon__middle {
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color: #FFF;
+			-webkit-transform-origin: 0% 50%;
+			        transform-origin: 0% 50%;	/* left middle of element */
+			-webkit-transition: all .3s ease-out;
+			transition: all .3s ease-out;
+
+		}
+
+/*&__bottom {*/
+
+.site-header__menu-icon::after {
+			content: "";	/* Must be present otherwise width and height will both be zero */
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color: #FFF;
+			-webkit-transform-origin: 0% 100%;
+			        transform-origin: 0% 100%; /* left bottom corner of element */
+			-webkit-transition: -webkit-transform .3s ease-out;
+			transition: -webkit-transform .3s ease-out;
+			transition: transform .3s ease-out;
+			transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+		}
 
 @media (min-width: 900px) {
 
 .site-header__menu-icon {
 			display: none
+
+		
 	}
 	}
+
+.site-header__menu-icon--close-x::before {
+			
+			-webkit-transform: rotate(45deg) scaleX(1.25);
+			
+			        transform: rotate(45deg) scaleX(1.25);
+		}
+
+.site-header__menu-icon--close-x .site-header__menu-icon__middle {
+			opacity: 0; /* Hide */
+			-webkit-transform: scale(0);
+			        transform: scale(0);
+		}
+
+.site-header__menu-icon--close-x::after {
+			
+			/* pull bar downwards by 1px: translateY(1px) */
+			-webkit-transform: rotate(-45deg) scaleX(1.25) translate(0px, 1px);
+			        transform: rotate(-45deg) scaleX(1.25) translate(0px, 1px);
+		}
 
 .site-header__menu-content {
+		/* replace display: none; with opacity instead */
+		opacity: 0;
+		
+		/* Not visible in small scrveens */
+		/*
+		display: none; 
+		*/
+		padding-top: 90px;
+		text-align: center;
 
-		display: none;
+		-webkit-transform: scale(1.2);
+
+		        transform: scale(1.2);
+
+		/* position relative so that z-index will be acknowledged */
+		/* even if opacity = 0, it can still be clicked. so, we
+			send it to the background instead using a negative z-index */
+		position: relative;
+		z-index: -10;
+
+		/* instead of tracking transition opacity only, we use all */
+		-webkit-transition: all .3s ease-out;
+		transition: all .3s ease-out;
 	}
-
-/* Not visible in small scrveens */
 
 @media (min-width: 900px) {
 
 .site-header__menu-content {
-			display: block
+			/* replace display: none; with opacity instead */
+			/* And put it back in front again using z-index */
+			opacity: 1;
+			z-index: 1;
+			/* VISIBLE in small scrveens */
+			/*
+			display: block;
+			*/
+
+			-webkit-transform: scale(1);
+
+			        transform: scale(1);
+
+			padding-top: 0
 	}
 	}
+
+.site-header__menu-content--is-visible {
+			/* replace display: none; with opacity instead */
+			/* And put it back in front again using z-index */
+			opacity: 1;
+			z-index: 1;
+
+			-webkit-transform: scale(1);
+
+			        transform: scale(1);
+			/* VISIBLE in small scrveens */
+			/*
+			display: block;
+			*/
+		}
 
 .site-header .icon--logo {
 		background-size: 250px;
@@ -1718,8 +1853,23 @@ a {
 		background-position: center;
 	}
 
+.primary-nav {
+
+	padding-top: 10px;
+}
+
+@media (min-width: 900px) {
+
+.primary-nav {
+		padding-top: 0
+}
+	}
+
+@media (min-width: 900px) {
+
 .primary-nav--pull-right {
-		float: right;
+			float: right /* FLoat only for larger screens */
+	}
 	}
 
 /* ALL <ul> under .primar-nav */
@@ -1741,8 +1891,32 @@ a {
 
 .primary-nav li {
 		list-style: none;
-		float: left;	/* Make them all sit on one line */
-		padding-right: 20px;
+		padding-right: 7px;
+		display: inline-block;
+	}
+
+@media (min-width: 900px) {
+
+.primary-nav li {
+			float: left;	/* Make them all sit on one line; Only for larger screens */
+			display: block;	/* Reset */
+			padding-right: 20px
+	}
+	}
+
+/* This one is needed only if 'li' is made inline-block. This is done only just to save
+	the unneeded 20px padding for the last element if the 'li' items were displayed
+	inline-block */
+
+.primary-nav li:last-child {
+		padding-right: 0;
+	}
+
+@media (min-width: 900px) {
+
+.primary-nav li:last-child {
+			padding-right: 20px
+	}
 	}
 
 .primary-nav a {
@@ -1755,6 +1929,16 @@ a {
 		/* Adjust Padding to center vertically on the nav bar */
 		/* Padding will have no effect if DISPLAY <> BLOCK */
 		display: block;
-		padding: 12px 0;
+		padding: 5px 8px;
+		font-size: .8rem;
+		background-color: rgba(41,47,111, .5);
+	}
 
+@media (min-width: 900px) {
+
+.primary-nav a {
+			padding: 12px 0;
+			font-size: 1rem;
+			background-color: rgba(41,47,111, 0)
+	}
 	}

@@ -4,12 +4,24 @@
 	width: 100%;
 	z-index: 2;
 
+	/* When background-color value changes, use ease-out 
+	   transition style for a transition duration of .3s */
+	transition: all .3s ease-out;
+
+	&--is-expanded {
+		background-color: rgba($mainBlue, .55);
+	}
+
 	@mixin atMedium {
 		background-color: rgba($mainBlue, .3);
 	}
 
 	&__button-container {
-		float: right;
+		
+
+		@mixin atMedium {
+			float: right;	/* Float right only for bigger screens */	
+		}
 	}
 
 	&__logo {
@@ -61,23 +73,127 @@
 
 	&__menu-icon {
 		width: 20px;
-		height: 20px;
-		background-color: $mainWhite;
+		height: 19px;	/* changed form 20px to 19px so that hamburger lines will be evenly spaced */
+		/* even if this is removed, and becomes transparent, it can still be clicked */
+		/*background-color: $mainWhite;*/
 		position: absolute;
 		top: 10px;
 		right: 10px;
+		z-index: 10;
+
+		/* &__top { */
+		&::before {
+			content: "";	/* Must be present otherwise width and height will both be zero */
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color: $mainWhite;
+			transform-origin: 0% 0%;	/* left top corner of element */
+			transition: transform .3s ease-out;
+		}
+
+		&__middle {
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color: $mainWhite;
+			transform-origin: 0% 50%;	/* left middle of element */
+			transition: all .3s ease-out;
+
+		}
+
+		/*&__bottom {*/
+		&::after {
+			content: "";	/* Must be present otherwise width and height will both be zero */
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color: $mainWhite;
+			transform-origin: 0% 100%; /* left bottom corner of element */
+			transition: transform .3s ease-out;
+		}
 
 		@mixin atMedium {
 			display: none;
 		}
+
+		
+	}
+
+	&__menu-icon--close-x {
+
+		&::before {
+			
+			transform: rotate(45deg) scaleX(1.25);
+		}
+
+		.site-header__menu-icon__middle {
+			opacity: 0; /* Hide */
+			transform: scale(0);
+		}
+
+		&::after {
+			
+			/* pull bar downwards by 1px: translateY(1px) */
+			transform: rotate(-45deg) scaleX(1.25) translate(0px, 1px);
+		}
 	}
 
 	&__menu-content {
+		/* replace display: none; with opacity instead */
+		opacity: 0;
+		
+		/* Not visible in small scrveens */
+		/*
+		display: none; 
+		*/
+		padding-top: 90px;
+		text-align: center;
 
-		display: none; /* Not visible in small scrveens */
+		transform: scale(1.2);
+
+		/* position relative so that z-index will be acknowledged */
+		/* even if opacity = 0, it can still be clicked. so, we
+			send it to the background instead using a negative z-index */
+		position: relative;
+		z-index: -10;
+
+		/* instead of tracking transition opacity only, we use all */
+		transition: all .3s ease-out;
+
 
 		@mixin atMedium {
+			/* replace display: none; with opacity instead */
+			/* And put it back in front again using z-index */
+			opacity: 1;
+			z-index: 1;
+			/* VISIBLE in small scrveens */
+			/*
 			display: block;
+			*/
+
+			transform: scale(1);
+
+			padding-top: 0;
+		}
+
+		&--is-visible {
+			/* replace display: none; with opacity instead */
+			/* And put it back in front again using z-index */
+			opacity: 1;
+			z-index: 1;
+
+			transform: scale(1);
+			/* VISIBLE in small scrveens */
+			/*
+			display: block;
+			*/
 		}
 	}	
 
