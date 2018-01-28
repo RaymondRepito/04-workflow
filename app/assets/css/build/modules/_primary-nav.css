@@ -1,0 +1,36 @@
+.primary-nav {
+
+	&--pull-right {
+		float: right;
+	}
+
+	/* ALL <ul> under .primar-nav */
+	ul {
+		margin: 0;
+		padding: 0;
+
+		/* Fix floated children (i.e. <li> below) */
+		@mixin clearfix;
+	}
+
+	/* ALL <li> under .primar-nav */
+	li {
+		list-style: none;
+		float: left;	/* Make them all sit on one line */
+		padding-right: 20px;
+	}
+
+	a {
+		text-decoration: none;
+		color: $mainWhite;
+		font-weight: 300;
+
+		/* WHAT IS THIS FOR! at 5mins remaning in Training VIdeo 36 this does not exist yet */
+		
+		/* Adjust Padding to center vertically on the nav bar */
+		/* Padding will have no effect if DISPLAY <> BLOCK */
+		display: block;
+		padding: 12px 0;
+
+	}
+}

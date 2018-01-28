@@ -94,12 +94,12 @@ var jane = new Person("Scooby Dog56", "yellow");
 jane.greet();
 
 
-alert("ASASXXYZ");
+alert("This is a test for our webpack automation win win win!");
 
 window.onload = function() {
     if ($) {  
         // jQuery is loaded  
-        alert("Yeah!");
+        alert("Yeah baXY!");
     } else {
         // jQuery is not loaded
         alert("Doesn't Work");

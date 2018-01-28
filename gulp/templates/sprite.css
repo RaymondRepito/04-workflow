@@ -1,4 +1,6 @@
 /* Source: https://github.com/jkphl/svg-sprite */
+/* MUST NOT EDIT THIS DIRECTLY */
+/* EDIT TEMPLATES/SPRITE.CSS INSTEAD */
 
 /* Loop */
 {{#shapes}}
@@ -6,7 +8,7 @@
 	/* Run Only Once */
 	{{#first}}
 		.icon {
-			background-image: url('/assets/img/sprites/css/{{{sprite}}}');
+			background-image: url('/assets/img/sprites/{{{sprite}}}');
 		}
 	{{/first}}
 

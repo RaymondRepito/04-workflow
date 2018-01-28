@@ -8,27 +8,127 @@ gulp.task('watch', function() {
 	browserSync.init({
 		notify: false,
 		server: {
-			baseDir: "app"
+			baseDir: "tmp"
 		}
 	});
 
-	watch('./app/index.html', function() {
-		//console.log("./app/index.html changed event. BrowserSync here.");
-		browserSync.reload();
-
+	/************************
+		Image files
+ 	 ************************/
+	watch(['./src/assets/img/**/*.jpg',
+			'./src/assets/img/**/*.png',
+			'./src/assets/img/**/*.ico'], function() {
+		console.log("watch img");
+		
+		
+		gulp.start('reloadBrowserSync-4-img');
 	});
 
-	watch('./app/assets/css/build/**/*.css', function() {
-		//console.log("./app/assets/css/build/**/*.css changed event. PostCSS or SASS here.");
+	/************************
+		Sprite Icon files
+ 	 ************************/
+	watch(['./src/assets/img/icons/**/*.svg'], function() {
+		/*console.log("watch sprite icon files");*/
+		
+		
+		gulp.start('icons');
+	});
 
-		gulp.start('cssInject'); // Run cssInject task
+	/************************
+		.html files
+ 	 ************************/
+	watch('./src/index.html', function() {
+		/*console.log("watch ./src/index.html");*/
+		
+		gulp.start('reloadBrowserSync-4-html');
+		
+	});
+
+	/************************
+		.css files
+ 	 ************************/
+	/*watch('./app/assets/css/build/asterisk.css', function() */
+	watch('./src/assets/css/**/*.css', function() {
+		console.log("watch ./src/css/asterisk.css");
+
+		gulp.start('cssInject'); // Run cssInject task*/
+	});
+
+	/************************
+		.js files
+ 	 ************************/
+	watch('./src/assets/js/**/*.js', function() {
+		console.log("watch ./src/assets/js/asterisk.js");
+
+		gulp.start('scriptsRefresh');
 	});
 
 });
 
+/*********************** 
+	Image files
+ ***********************/
+gulp.task('reloadBrowserSync-4-img', ['copyImage'], function() {
+
+	console.log("reloadBrowserSync-4-img");
+
+	browserSync.reload();
+});
+
+gulp.task('copyImage', function() {
+	/*console.log("copyImage");*/
+
+	return gulp.src(['./src/assets/img/**/*.jpg',
+			'./src/assets/img/**/*.png',
+			'./src/assets/img/**/*.ico'])
+			.on('error', function(errorInfo) {
+				console.log(errorInfo.toString());
+				this.emit('end');
+			})
+			.pipe(gulp.dest('./tmp/assets/img'));
+
+});
+/******************************************************************************/
+/******************************************************************************/
+
+
+/*********************** 
+	*.html files
+ ***********************/
+gulp.task('reloadBrowserSync-4-html', ['copyIndexHtml'], function() {
+
+	console.log("reloadBrowserSync-4-html");
+
+	browserSync.reload();
+});
+
+gulp.task('copyIndexHtml', function() {
+	/*console.log("copyIndexHtml");*/
+
+	return gulp.src('./src/index.html')
+			.pipe(gulp.dest('./tmp'));
+});
+/******************************************************************************/
+/******************************************************************************/
+
+
+/*********************** 
+	*.css files
+ ***********************/
 // Run dependency tasks (i.e param 2; ex. 'styles' task found in 'gulp/tasks/styles.js') before 
 // running the specified task (i.e. 'cssInject')
 gulp.task('cssInject', ['styles'], function() {
-	return gulp.src('./app/assets/css/styles.css')
+
+	console.log("cssInject");
+
+	return gulp.src('./tmp/assets/css/styles.css')
 		.pipe(browserSync.stream());
+});
+
+// Run dependency tasks (i.e param 2; ex. 'scripts' task found in 'gulp/tasks/scripts.js') before 
+// running the specified task (i.e. 'scriptsRefresh')
+gulp.task('scriptsRefresh', ['scripts'], function() {
+	console.log("scriptsRefresh");
+
+	browserSync.reload();
 });

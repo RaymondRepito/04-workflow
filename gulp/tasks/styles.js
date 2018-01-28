@@ -7,13 +7,22 @@ var gulp = require('gulp'),
 	mixins = require('postcss-mixins'),
 	hexrgba = require('postcss-hexrgba');
 
+/******************************************************************************/
+/******************************************************************************/
+
+
+/*********************** 
+	CSS Related Tasks
+ ***********************/
 gulp.task('styles', function() {
 
-	return gulp.src('./app/assets/css/build/styles.css')
+	console.log("styles");
+
+	return gulp.src('./src/assets/css/styles.css')
 		.pipe(postcss([cssimport, mixins, cssvars, nested, hexrgba, autoprefixer]))
 		.on('error', function(errorInfo) {
 			console.log(errorInfo.toString());
 			this.emit('end');
 		})
-		.pipe(gulp.dest('./app/assets/css'));
+		.pipe(gulp.dest('./tmp/assets/css'));
 });
