@@ -23,6 +23,9 @@ class Person {
 export default Person;
 
 
+
+
+
 /* ES 5 */
 /*
 function Person(fullName, favColor) {
