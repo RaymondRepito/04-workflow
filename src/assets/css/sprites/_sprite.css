@@ -1,0 +1,146 @@
+/* Source: https://github.com/jkphl/svg-sprite */
+
+/* Loop */
+	
+	/* Run Only Once */
+		.icon {
+			background-image: url('/assets/img/sprites/sprite-d40125ee.svg');
+		}
+
+	.icon--DGTIES_FA_HORIZONTAL_FLAT_colored_2018_01_22 {
+		
+		width: 2000px;
+		height: 800px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 0 0;
+	}
+	
+	/* Run Only Once */
+
+	.icon--DGTIES_FA_ICON_7.99in_x_8.88in_colored_2018_01_22 {
+		
+		width: 575.1px;
+		height: 639.1px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 0 99.88762642027719%;
+	}
+	
+	/* Run Only Once */
+
+	.icon--clear-view-escapes {
+		
+		width: 142.4px;
+		height: 59.53px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 30.959302325581397% 57.951277463472586%;
+	}
+	
+	/* Run Only Once */
+
+	.icon--comment {
+		
+		width: 64px;
+		height: 64px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 29.705578512396695% 62.465843023255815%;
+	}
+	
+	/* Run Only Once */
+
+	.icon--facebook {
+		
+		width: 21.23px;
+		height: 42.01px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 44.234044381105434% 57.22501591570755%;
+	}
+	
+	/* Run Only Once */
+
+	.icon--fire {
+		
+		width: 56px;
+		height: 64px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 32.87551440329218% 62.465843023255815%;
+	}
+	
+	/* Run Only Once */
+
+	.icon--globe {
+		
+		width: 64px;
+		height: 64px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 35.90392561983471% 62.465843023255815%;
+	}
+	
+	/* Run Only Once */
+
+	.icon--instagram {
+		
+		width: 42.01px;
+		height: 42.01px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 42.55792930505263% 57.22501591570755%;
+	}
+	
+	/* Run Only Once */
+
+	.icon--mail {
+		
+		width: 64px;
+		height: 48px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 37.06095041322314% 57.47126436781609%;
+	}
+	
+	/* Run Only Once */
+
+	.icon--rain {
+		
+		width: 64px;
+		height: 64px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 39.20971074380165% 62.465843023255815%;
+	}
+	
+	/* Run Only Once */
+
+	.icon--star {
+		
+		width: 64px;
+		height: 64px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 42.51549586776859% 62.465843023255815%;
+	}
+	
+	/* Run Only Once */
+
+	.icon--twitter {
+		
+		width: 51.78px;
+		height: 42.06px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 40.1135395386558% 57.227062677940395%;
+	}
+	
+	/* Run Only Once */
+
+	.icon--wifi {
+		
+		width: 60px;
+		height: 64px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 45.72680412371134% 62.465843023255815%;
+	}
+	
+	/* Run Only Once */
+
+	.icon--youtube {
+		
+		width: 34.75px;
+		height: 42px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		background-position: 45.61862358478565% 57.22460658082976%;
+	}
