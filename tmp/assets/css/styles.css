@@ -622,14 +622,9 @@ a {
 
 	border-bottom: 2px solid #292f6f;
 
-	
-	
-
-
-
 }
 
-.large-hero--image {
+.large-hero__image {
 		max-width: 100%;
 		height: auto;
 
@@ -647,7 +642,7 @@ a {
 		display: block;
 	}
 
-.large-hero--text-content {
+.large-hero__text-content {
 		text-align: center;
 
 		/* Position */
@@ -670,7 +665,7 @@ a {
 
 @media (min-width: 600px) {
 
-.large-hero--text-content {
+.large-hero__text-content {
 			/* Narrow Text Area */
 			left: 20%;
 			margin-right: 20%
@@ -682,7 +677,7 @@ a {
 
 @media (min-width: 900px) {
 
-.large-hero--text-content {
+.large-hero__text-content {
 			text-align: left;
 			left: 5%;
 			max-width: 33.33%
@@ -690,7 +685,7 @@ a {
 	}
 	}
 
-.large-hero--category {
+.large-hero__category {
 		/* Remove Margins */
 		margin: 0 0 0 0 ;
 
@@ -698,26 +693,26 @@ a {
 
 	}
 
-.large-hero--category--thin {
+.large-hero__category--thin {
 			font-weight: 100;
 		}
 
-.large-hero--category--thick {
+.large-hero__category--thick {
 			font-weight: bold;
 		}
 
-.large-hero--category--yellow {
+.large-hero__category--yellow {
 			/* Font Color & Size */
 			color: #f9d83f;	
 		}
 
-.large-hero--category--uppercase {
+.large-hero__category--uppercase {
 			text-transform: uppercase;
 		}
 
 @media (min-width: 600px) {
 
-.large-hero--category {
+.large-hero__category {
 			font-size: 1.1rem
 
 	}
@@ -725,13 +720,13 @@ a {
 
 @media (min-width: 900px) {
 
-.large-hero--category {
+.large-hero__category {
 			font-size: .75rem
 
 	}
 	}
 
-.large-hero--title {
+.large-hero__title {
 		/* Remove Margins */
 		margin: 0 0 0 0 ;
 
@@ -744,29 +739,29 @@ a {
 		margin-top: .25rem;
 	}
 
-.large-hero--title--blue {
+.large-hero__title--blue {
 			color: #292f6f;
 		}
 
-.large-hero--title--uppercase {
+.large-hero__title--uppercase {
 			text-transform: uppercase;
 		}
 
 @media (min-width: 600px) {
 
-.large-hero--title {
+.large-hero__title {
 			font-size: 2.1rem
 	}
 	}
 
 @media (min-width: 900px) {
 
-.large-hero--title {
+.large-hero__title {
 			font-size: 1.55rem
 	}
 	}
 
-.large-hero--description {
+.large-hero__description {
 
 		/* Remove Margins */
 		margin: 0 0 0 0;
@@ -795,13 +790,13 @@ a {
 		
 	}
 
-.large-hero--description--blue {
+.large-hero__description--blue {
   			color: #292f6f;
   		}
 
 @media (min-width: 600px) {
 
-.large-hero--description {
+.large-hero__description {
 			font-size: 1.2rem;	
 
 			/* Trucate with Ellipsis */
@@ -816,7 +811,7 @@ a {
 
 @media (min-width: 900px) {
 
-.large-hero--description {
+.large-hero__description {
 			font-size: .95rem;
 
 			/* line-height */
@@ -1626,8 +1621,21 @@ a {
 @media (min-width: 900px) {
 
 .site-header {
+		position: fixed;	/* Lock position even if we scroll */
 		background-color: rgba(41,47,111, .3)
 }
+	}
+
+@media (min-width: 900px) {
+
+.site-header--dark {
+			background-color: rgba(23, 51, 72, .85)
+	}	
+
+			.site-header--dark .site-header__logo {
+				-webkit-transform: scale(.071);
+				        transform: scale(.071);
+			}
 	}
 
 @media (min-width: 900px) {
@@ -1640,6 +1648,13 @@ a {
 .site-header__logo {
 		position: absolute;
 		
+		-webkit-transition: -webkit-transform .3s ease-out;
+		
+		transition: -webkit-transform .3s ease-out;
+		
+		transition: transform .3s ease-out;
+		
+		transition: transform .3s ease-out, -webkit-transform .3s ease-out;
 		/* 	
 			The element will occupy only as much as it needs. 
 			So if we want it to occupy the full width, we set width=100%!!!
@@ -1653,7 +1668,7 @@ a {
 		width: 100%;
 		*/
 
-		background-color: rgba(41,47,111, 1);
+		background-color: rgba(255,255,255, 1);
 		padding: 25px 36px;
 
 		/* Offset .site-header padding of 10px above */
@@ -1940,7 +1955,12 @@ a {
 			padding: 12px 0;
 			font-size: 1rem;
 			background-color: rgba(41,47,111, 0)
+
+			/* dot notation interpreted as "has/contains a" */
 	}
+			.primary-nav a.is-current-link {
+				color: #fabb69;
+			}
 	}
 
 .reveal-item {

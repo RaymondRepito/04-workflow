@@ -168,12 +168,16 @@
 
                     <nav class="primary-nav primary-nav--pull-right">
                         <ul>
-                            <li><a href="#our-beginning">Home</a></li>
-                            <li><a href="#features">Services</a></li>
-                            <li><a href="#testimonials">Company</a></li>
-                            <li><a href="#testimonials">Blog</a></li>
-                            <li><a href="#testimonials">Careers</a></li>
-                            <li><a href="#testimonials">Contact us</a></li>
+                            <li><a href="#our-beginning" id="our-beginning-link">Our Beginning</a></li>
+                            <li><a href="#features" id="features-link">Features</a></li>
+                            <li><a href="#testimonials" id="testimonials-link">Testimonials</a></li>
+                            <!--
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#company">Company</a></li>
+                            <li><a href="#blogs" id="blogs-link>Blog</a></li>
+                            <li><a href="#careers" id="careers-link>Careers</a></li>
+                            <li><a href="#contact-us" id="contact-us-link>Contact us</a></li>
+                            -->
                         </ul>
                     </nav>
                 </div>
@@ -203,26 +207,26 @@
 
 -->
                     <picture>
-                        <source class="large-hero--image" srcset="assets/img/hero-sliders/bg-her-dgties-marketing-01-xlarge-hi-dpi-02.jpg 5120w, assets/img/hero-sliders/bg-her-dgties-marketing-01-xlarge-02.jpg 2560w" media="(min-width: 1800px)">
+                        <source class="large-hero__image" srcset="assets/img/hero-sliders/bg-her-dgties-marketing-01-xlarge-hi-dpi-02.jpg 5120w, assets/img/hero-sliders/bg-her-dgties-marketing-01-xlarge-02.jpg 2560w" media="(min-width: 1800px)">
 
-                        <source  class="large-hero--image"  srcset="assets/img/hero-sliders/bg-hero-dgties-marketing-01-xlarge-hi-dpi-02.jpg 5120w, assets/img/hero-sliders/bg-hero-dgties-marketing-01-xlarge-02.jpg 2560w" media="(min-width: 1200px)">
+                        <source  class="large-hero__image"  srcset="assets/img/hero-sliders/bg-hero-dgties-marketing-01-xlarge-hi-dpi-02.jpg 5120w, assets/img/hero-sliders/bg-hero-dgties-marketing-01-xlarge-02.jpg 2560w" media="(min-width: 1200px)">
 
-                        <source  class="large-hero--image"  srcset="assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-hi-dpi-03.jpg 3072w, assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-03.jpg 1536w" media="(min-width: 900px)">
+                        <source  class="large-hero__image"  srcset="assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-hi-dpi-03.jpg 3072w, assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-03.jpg 1536w" media="(min-width: 900px)">
 
-                        <source  class="large-hero--image"  srcset="assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-hi-dpi-03.jpg 3072w, assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-03.jpg 1536w" media="(min-width: 600px)">
+                        <source  class="large-hero__image"  srcset="assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-hi-dpi-03.jpg 3072w, assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-03.jpg 1536w" media="(min-width: 600px)">
 
                         <img srcset="assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-hi-dpi-02.jpg 1536w, assets/img/hero-sliders/bg-hero-dgties-marketing-01-medium-02.jpg 768w" alt="Digital Marketing">
                     </picture>
 
-                    <div class="large-hero--text-content">
+                    <div class="large-hero__text-content">
 
                         <div class="wrapper">
 
-                            <h6 class="large-hero--category large-hero--category--yellow large-hero--category--uppercase  animated fadeIn delay03">Digital Marketing 26</h6>
-                            <h2 class="large-hero--title large-hero--title--uppercase animated fadeInLeft delay03">
-                                <a class="large-hero--title--blue" href="#">Making Stories</a>
+                            <h6 class="large-hero__category large-hero__category--yellow large-hero__category--uppercase  animated fadeIn delay03">Digital Marketing 26</h6>
+                            <h2 class="large-hero__title large-hero__title--uppercase animated fadeInLeft delay03">
+                                <a class="large-hero__title--blue" href="#">Making Stories</a>
                             </h1>
-                            <p class="large-hero--description large-hero--description--blue animated fadeIn delay03"> 
+                            <p class="large-hero__description large-hero__description--blue animated fadeIn delay03"> 
                                 “We’re entering an era of real-time marketing. If you’re not engaged in that conversation, you’re going to miss out.” - Reggie Bradford, Oracle Senior Vice President of Product Development<br/><br/>We publish tales of your story and strategically engage your customers. Let us create an impressive presence for you in the digital space.
                             </p>
                             <a class="button button--thin animated fadeInUp delay03" href="#">Start a Campaign</a>
@@ -237,7 +241,7 @@
 
             <section id="our-beginning-section">
 
-                <div id="our-beginning" class="page-section">
+                <div id="our-beginning" class="page-section" data-matching-link="#our-beginning-link">
 
                     <div class="wrapper">
 
@@ -290,7 +294,7 @@
   
             <section id="features-section">
 
-                <div id="features" class="page-section page-section--blue">
+                <div id="features" class="page-section page-section--blue"  data-matching-link="#features-link">
 
                     <div class="wrapper">
 
@@ -380,7 +384,7 @@
 
             <section id="testimonials-section">
 
-                <div id="testimonials" class="page-section page-section--no-b-padding-until-large  page-section--testimonials">
+                <div id="testimonials" class="page-section page-section--no-b-padding-until-large  page-section--testimonials" data-matching-link="#testimonials-link">
 
                     <div class="wrapper wrapper--no-padding-until-large">
                         

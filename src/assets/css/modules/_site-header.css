@@ -13,7 +13,20 @@
 	}
 
 	@mixin atMedium {
+		position: fixed;	/* Lock position even if we scroll */
 		background-color: rgba($mainBlue, .3);
+
+	}
+
+	&--dark {
+		
+		@mixin atMedium {
+			background-color: rgba(23, 51, 72, .85);	
+
+			& .site-header__logo {
+				transform: scale(.071);
+			}
+		}
 	}
 
 	&__button-container {
@@ -27,6 +40,7 @@
 	&__logo {
 		position: absolute;
 		
+		transition: transform .3s ease-out;
 		/* 	
 			The element will occupy only as much as it needs. 
 			So if we want it to occupy the full width, we set width=100%!!!
@@ -40,7 +54,7 @@
 		width: 100%;
 		*/
 
-		background-color: rgba($mainBlue, 1);
+		background-color: rgba($mainWhite, 1);
 		padding: 25px 36px;
 
 		/* Offset .site-header padding of 10px above */
