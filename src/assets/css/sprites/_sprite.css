@@ -5,15 +5,21 @@
 /* Loop */
 	
 	/* Run Only Once */
+
 		.icon {
-			background-image: url('/assets/img/sprites/sprite-d40125ee.svg');
+			background-image: url('/assets/img/sprites/sprite-a7699f55.svg');
 		}
+
+		.no-svg .icon {
+			background-image: url('/assets/img/sprites/sprite-a7699f55.png');
+		}
+
 
 	.icon--DGTIES_FA_HORIZONTAL_FLAT_colored_2018_01_22 {
 		
-		width: 2000px;
-		height: 800px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
+		width: 2002px;
+		height: 802px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
 		background-position: 0 0;
 	}
 	
@@ -21,128 +27,128 @@
 
 	.icon--DGTIES_FA_ICON_7.99in_x_8.88in_colored_2018_01_22 {
 		
-		width: 575.1px;
-		height: 639.1px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
-		background-position: 0 99.88762642027719%;
+		width: 577.1px;
+		height: 641.1px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
+		background-position: 0 99.88790633951925%;
 	}
 	
 	/* Run Only Once */
 
 	.icon--clear-view-escapes {
 		
-		width: 142.4px;
-		height: 59.53px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
-		background-position: 30.959302325581397% 57.951277463472586%;
+		width: 144.4px;
+		height: 61.53px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
+		background-position: 31.06696813092162% 58.01210876185378%;
 	}
 	
 	/* Run Only Once */
 
 	.icon--comment {
 		
-		width: 64px;
-		height: 64px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
-		background-position: 29.705578512396695% 62.465843023255815%;
+		width: 66px;
+		height: 66px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
+		background-position: 29.80888429752066% 62.665457184325106%;
 	}
 	
 	/* Run Only Once */
 
 	.icon--facebook {
 		
-		width: 21.23px;
-		height: 42.01px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
-		background-position: 44.234044381105434% 57.22501591570755%;
+		width: 23.23px;
+		height: 44.01px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
+		background-position: 44.739408824673916% 57.286123472310514%;
 	}
 	
 	/* Run Only Once */
 
 	.icon--fire {
 		
-		width: 56px;
-		height: 64px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
-		background-position: 32.87551440329218% 62.465843023255815%;
+		width: 58px;
+		height: 66px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
+		background-position: 33.08127572016461% 62.665457184325106%;
 	}
 	
 	/* Run Only Once */
 
 	.icon--globe {
 		
-		width: 64px;
-		height: 64px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
-		background-position: 35.90392561983471% 62.465843023255815%;
+		width: 66px;
+		height: 66px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
+		background-position: 36.21384297520661% 62.665457184325106%;
 	}
 	
 	/* Run Only Once */
 
 	.icon--instagram {
 		
-		width: 42.01px;
-		height: 42.01px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
-		background-position: 42.55792930505263% 57.22501591570755%;
+		width: 44.01px;
+		height: 44.01px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
+		background-position: 42.96651157564645% 57.286123472310514%;
 	}
 	
 	/* Run Only Once */
 
 	.icon--mail {
 		
-		width: 64px;
-		height: 48px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
-		background-position: 37.06095041322314% 57.47126436781609%;
+		width: 66px;
+		height: 50px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
+		background-position: 37.267561983471076% 57.53228120516499%;
 	}
 	
 	/* Run Only Once */
 
 	.icon--rain {
 		
-		width: 64px;
-		height: 64px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
-		background-position: 39.20971074380165% 62.465843023255815%;
+		width: 66px;
+		height: 66px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
+		background-position: 39.622933884297524% 62.665457184325106%;
 	}
 	
 	/* Run Only Once */
 
 	.icon--star {
 		
-		width: 64px;
-		height: 64px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
-		background-position: 42.51549586776859% 62.465843023255815%;
+		width: 66px;
+		height: 66px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
+		background-position: 43.03202479338843% 62.665457184325106%;
 	}
 	
 	/* Run Only Once */
 
 	.icon--twitter {
 		
-		width: 51.78px;
-		height: 42.06px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
-		background-position: 40.1135395386558% 57.227062677940395%;
+		width: 53.78px;
+		height: 44.06px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
+		background-position: 40.42151297081438% 57.28816949297827%;
 	}
 	
 	/* Run Only Once */
 
 	.icon--wifi {
 		
-		width: 60px;
-		height: 64px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
-		background-position: 45.72680412371134% 62.465843023255815%;
+		width: 62px;
+		height: 66px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
+		background-position: 46.345360824742265% 62.665457184325106%;
 	}
 	
 	/* Run Only Once */
 
 	.icon--youtube {
 		
-		width: 34.75px;
-		height: 42px;
-		/*background-image: url('../../assets/img/sprite/css/sprite-d40125ee.svg');*/
-		background-position: 45.61862358478565% 57.22460658082976%;
+		width: 36.75px;
+		height: 44px;
+		/*background-image: url('../../assets/img/sprite/css/sprite-a7699f55.svg');*/
+		background-position: 46.2292329220201% 57.285714285714285%;
 	}

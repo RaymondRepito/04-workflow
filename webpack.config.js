@@ -16,7 +16,7 @@ module.exports = {
 	/* App - main entry point */
 	entry: {
 		App: "./src/assets/js/App.js",
-		LazySizes: "./src/assets/vendors/lazysizes/LazySizes.js"
+		Vendor: "./src/assets/js/Vendor.js"
 	},
 	output: {
 		path: path.resolve(__dirname, "./tmp/assets/js"),

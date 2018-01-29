@@ -1,7 +1,9 @@
 var gulp = require('gulp'),
 	webpack = require('webpack');
 
-gulp.task('scripts', function(callback) {
+/* gulp.task('scripts', ['modernizr'], function(callback) { */
+/* presence of modernizr dependency causes permission error */
+gulp.task('scripts', ['modernizr'], function(callback) {
 
 	/*console.log("scripts");*/
 
