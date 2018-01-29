@@ -57,8 +57,8 @@ gulp.task('watch', function() {
 	/************************
 		.js files
  	 ************************/
-	watch('./src/assets/js/**/*.js', function() {
-		console.log("watch ./src/assets/js/asterisk.js");
+	watch('./src/assets/**/*.js', function() {
+		console.log("watch ./src/assets/asterisk.js");
 
 		gulp.start('scriptsRefresh');
 	});

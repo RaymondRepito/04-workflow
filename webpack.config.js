@@ -8,10 +8,23 @@ const path = require('path');
 /* path: needs to be an absoulte path instead of a relative 
 	path './tmp/assets/js' . we use path.resolve */
 module.exports = {
+	/* Single Entry Point */
+	/*
 	entry: "./src/assets/js/App.js",
+	*/
+	/* Multiple Entry Points */
+	/* App - main entry point */
+	entry: {
+		App: "./src/assets/js/App.js",
+		LazySizes: "./src/assets/vendors/lazysizes/LazySizes.js"
+	},
 	output: {
 		path: path.resolve(__dirname, "./tmp/assets/js"),
-		filename: "App.js"
+		/* If multiple entry points */
+		/* 		Use [name].js will use the entry point names i.e. "App:"," "LazySizes:" */
+		/* If single entry point  					*/
+		/* 		Use specific filename like App.js 	*/
+		filename: "[name].js"
 	},
 	module: {
 		loaders: [

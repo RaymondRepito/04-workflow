@@ -1029,11 +1029,16 @@ a {
 @media (min-width: 1010px) {
 
 .page-section--testimonials {
-			/* vertically align top */
-			/* horizontally align center */
-			/* no-repeat = no tiling */
-			background: url('/assets/img/testimonials-bg.jpg') top center no-repeat
+
+			/* has/contains = also has a class of... */
 	}
+			.page-section--testimonials.lazyloaded {
+				/* vertically align top */
+				/* horizontally align center */
+				/* no-repeat = no tiling */
+				background: url('/assets/img/testimonials-bg.jpg') top center no-repeat;
+				background-size: cover;				
+			}
 	}
 
 /* h2 */

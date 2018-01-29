@@ -37,10 +37,16 @@
 		background-color: #e0e6ef;
 
 		@mixin atLarge {
-			/* vertically align top */
-			/* horizontally align center */
-			/* no-repeat = no tiling */
-			background: url('/assets/img/testimonials-bg.jpg') top center no-repeat;
+
+			/* has/contains = also has a class of... */
+			&.lazyloaded {
+				/* vertically align top */
+				/* horizontally align center */
+				/* no-repeat = no tiling */
+				background: url('/assets/img/testimonials-bg.jpg') top center no-repeat;
+				background-size: cover;				
+			}
+			
 		}
 	}
 }

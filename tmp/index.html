@@ -86,7 +86,7 @@
         </style>
 
 
-        
+        <script type="text/javascript" src="assets/js/lazysizes.js"></script>
     </head>
 
     <body>
@@ -252,7 +252,7 @@
                             <h3 class="headline headline--centered headline--light headline--orange headline--small headline--narrow headline--b-margin-large">Ever since, we&rsquo;ve been working to make travel <stron>better for everyone.</stron></h3>
 
                             <div class="wrapper wrapper--medium wrapper--b-margin">
-                                <img sizes="(min-width: 970px) 976px, 100vw" srcset="assets/img/first-trip-low-res-i.jpg 565w, assets/img/first-trip-i.jpg 976w, assets/img/first-trip-hi-dpi-i.jpg 1952w" alt="Couple walking down a street.">
+                                <img class="lazyload" sizes="(min-width: 970px) 976px, 100vw" data-srcset="assets/img/first-trip-low-res-i.jpg 565w, assets/img/first-trip-i.jpg 976w, assets/img/first-trip-hi-dpi-i.jpg 1952w" alt="Couple walking down a street.">
                             </div>
 
                             <div class="row row--gutters">
@@ -261,9 +261,9 @@
                                     <picture>
 
                                         <!-- Video 24 - Attention to Detail - Part 1 -->
-                                        <source sizes="404px srcset="assets/img/our-start-i.jpg 404w, assets/img/our-start-hi-dpi-i.jpg 808w" media="(min-width: 1020px)">
-                                        <source sizes="320px" srcset="assets/img/our-start-portrait-i.jpg 382w, assets/img/our-start-portrait-hi-dpi-i.jpg 764w" media="(min-width: 900px)">
-                                        <img srcset="assets/img/our-start-landscape-i.jpg 800w, assets/img/our-start-landscape-hi-dpi-i.jpg 1600w" alt="Our founder, Jane Doe">    
+                                        <source sizes="404px data-srcset="assets/img/our-start-i.jpg 404w, assets/img/our-start-hi-dpi-i.jpg 808w" media="(min-width: 1020px)">
+                                        <source sizes="320px" data-srcset="assets/img/our-start-portrait-i.jpg 382w, assets/img/our-start-portrait-hi-dpi-i.jpg 764w" media="(min-width: 900px)">
+                                        <img class="lazyload" data-srcset="assets/img/our-start-landscape-i.jpg 800w, assets/img/our-start-landscape-hi-dpi-i.jpg 1600w" alt="Our founder, Jane Doe">    
                                     </picture>
                                     
                                 </div>
@@ -384,7 +384,7 @@
 
             <section id="testimonials-section">
 
-                <div id="testimonials" class="page-section page-section--no-b-padding-until-large  page-section--testimonials" data-matching-link="#testimonials-link">
+                <div id="testimonials" class="page-section page-section--no-b-padding-until-large  page-section--testimonials lazyload" data-matching-link="#testimonials-link">
 
                     <div class="wrapper wrapper--no-padding-until-large">
                         
@@ -403,7 +403,7 @@
                                     <article id="jane-doe-testimonial">
 
                                         <div class="testimonial__photo">
-                                            <img sizes="160px" srcset="assets/img/testimonial-jane-i.jpg 160w, assets/img/testimonial-jane-hi-dpi-i.jpg 320w" alt="Jane Doe">
+                                            <img class="lazyload" sizes="160px" data-srcset="assets/img/testimonial-jane-i.jpg 160w, assets/img/testimonial-jane-hi-dpi-i.jpg 320w" alt="Jane Doe">
                                         </div>
 
                                         <h3 class="testimonial__title">Jane Doe</h3>
@@ -426,7 +426,7 @@
                                     <article id="john-smith-testimonial">
 
                                         <div class="testimonial__photo">
-                                            <img sizes="160px" srcset="assets/img/testimonial-john-i.jpg 160w, assets/img/testimonial-john-hi-dpi-i.jpg 320w" alt="John Smith">
+                                            <img class="lazyload" sizes="160px" data-srcset="assets/img/testimonial-john-i.jpg 160w, assets/img/testimonial-john-hi-dpi-i.jpg 320w" alt="John Smith">
                                         </div>
 
                                         <h3 class="testimonial__title">John Smith</h3>
@@ -449,7 +449,7 @@
                                     <article id="cat-mckitty-testimonial">
 
                                         <div class="testimonial__photo">
-                                            <img sizes="160px" srcset="assets/img/testimonial-cat-i.jpg 160w, assets/img/testimonial-cat-hi-dpi-i.jpg 320w" alt="Cat McKitty">                                            
+                                            <img class="lazyload" sizes="160px" data-srcset="assets/img/testimonial-cat-i.jpg 160w, assets/img/testimonial-cat-hi-dpi-i.jpg 320w" alt="Cat McKitty">                                            
                                         </div>
                                         
                                         <h3 class="testimonial__title">Cat McKitty</h3>
