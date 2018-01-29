@@ -1,0 +1,48 @@
+.modal {
+	position: fixed;
+	z-index: 5; /* make always on top */
+	background-color: rgba(255, 255, 255, .94);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	opacity: 0;	/*visually hidden but it is there. hovering over social-media will prove this w/ cursor */
+	visibility: hidden;	/* So we can avoid hovering over the links (only visually hidden coz of opacity) */
+	transform: scale(1.2);
+	transition: all .3s ease-out;
+
+	&--is-visible {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+
+	&__inner {
+		position: absolute;	/* absolute has the effect of shrink-wrapping the contents */
+		width: 100%;	/* tell to have a full width instead of shrink-wrapping */
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&__description {
+		text-align: center;
+		font-size: 1.3rem;
+		font-weight: 300;
+		line-height: 1.65;
+	}
+
+	&__close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size: 2rem;
+		transform: scaleX(1.2);
+		transform: 100% 0;
+		color: $mainBlue;
+
+		&:hover {
+			color: $mainOrange;
+			cursor: pointer;
+		}
+	}
+}

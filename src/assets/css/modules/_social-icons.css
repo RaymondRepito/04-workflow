@@ -1,0 +1,30 @@
+.social-icons {
+	text-align: center;
+
+	&__icon {
+		/* Center Icons (.icon) */
+		position: relative;
+
+		background-color: $mainOrange;
+		display: inline-block; /* so that all social media icons will sit on a single line */
+		margin: 0 5px 5px 5px;
+		width: 33%;
+		height: 72px;
+
+		@mixin atSmall {
+			width: 72px;
+			margin: 0 5px;
+		}
+
+		.icon {
+			/* So taht it takes up space */
+			display: block;	/* So that  tthe automatic width and height from sprite will be applied */
+
+			/* Center Icons (.icon) */
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}

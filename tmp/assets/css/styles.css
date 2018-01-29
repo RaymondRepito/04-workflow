@@ -907,8 +907,10 @@ a {
 
 .wrapper--medium {
 		max-width: 976px;
-		margin-right: auto;
-		margin-left: auto;
+	}
+
+.wrapper--narrow {
+		max-width: 470px;
 	}
 
 .wrapper--no-padding-until-medium {
@@ -1278,7 +1280,6 @@ a {
 	font-size: 2.55rem;
 	font-weight: 300;
 	text-align: center;
-
 	
 }
 
@@ -1290,11 +1291,16 @@ a {
 		color: #292f6f;
 	}
 
+.section-title--less-margin {
+		
+		margin-bottom: 1.3rem;
+		margin-top: 0;
+	}
+
 @media (min-width: 600px) {
 
 .section-title {
 		font-size: 3.75rem
-
 	
 }
 	}
@@ -1978,3 +1984,94 @@ a {
 		-webkit-transform: scale(1);
 		        transform: scale(1);
 	}
+
+.modal {
+	position: fixed;
+	z-index: 5; /* make always on top */
+	background-color: rgba(255, 255, 255, .94);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	opacity: 0;	/*visually hidden but it is there. hovering over social-media will prove this w/ cursor */
+	visibility: hidden;	/* So we can avoid hovering over the links (only visually hidden coz of opacity) */
+	-webkit-transform: scale(1.2);
+	        transform: scale(1.2);
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+.modal--is-visible {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+
+.modal__inner {
+		position: absolute;	/* absolute has the effect of shrink-wrapping the contents */
+		width: 100%;	/* tell to have a full width instead of shrink-wrapping */
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		        transform: translateY(-50%);
+	}
+
+.modal__description {
+		text-align: center;
+		font-size: 1.3rem;
+		font-weight: 300;
+		line-height: 1.65;
+	}
+
+.modal__close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size: 2rem;
+		-webkit-transform: scaleX(1.2);
+		        transform: scaleX(1.2);
+		-webkit-transform: 100% 0;
+		        transform: 100% 0;
+		color: #292f6f;
+	}
+
+.modal__close:hover {
+			color: #d59541;
+			cursor: pointer;
+		}
+
+.social-icons {
+	text-align: center;
+}
+
+.social-icons__icon {
+		/* Center Icons (.icon) */
+		position: relative;
+
+		background-color: #d59541;
+		display: inline-block; /* so that all social media icons will sit on a single line */
+		margin: 0 5px 5px 5px;
+		width: 33%;
+		height: 72px;
+	}
+
+@media (min-width: 600px) {
+
+.social-icons__icon {
+			width: 72px;
+			margin: 0 5px
+	}
+	}
+
+.social-icons__icon .icon {
+			/* So taht it takes up space */
+			display: block;	/* So that  tthe automatic width and height from sprite will be applied */
+
+			/* Center Icons (.icon) */
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			        transform: translate(-50%, -50%);
+		}

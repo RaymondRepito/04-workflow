@@ -14,8 +14,10 @@
 
 	&--medium {
 		max-width: 976px;
-		margin-right: auto;
-		margin-left: auto;
+	}
+
+	&--narrow {
+		max-width: 470px;
 	}
 
 	&--no-padding-until-medium {
